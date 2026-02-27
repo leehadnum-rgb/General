@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GLOBE_OECD>
+  <GLOBEHeader>
+    <MessageRefId>DEMO-2026-0001</MessageRefId>
+    <Timestamp>2026-02-23T10:15:30Z</Timestamp>
+    <ReportingPeriod>
+      <StartDate>2025-01-01</StartDate>
+      <EndDate>2025-12-31</EndDate>
+    </ReportingPeriod>
+  </GLOBEHeader>
+
+  <GLOBEBody>
+    <FilingInfo>
+      <FilingCE>
+        <Name>Demo Ultimate Parent Entity Ltd</Name>
+        <TIN>US-99-1234567</TIN>
+        <Role>GIR401</Role>
+      </FilingCE>
+
+      <AccountingInfo>
+        <Currency>USD</Currency>
+        <AccountingStandard>IFRS</AccountingStandard>
+      </AccountingInfo>
+
+      <Contact>
+        <Name>Jane Doe</Name>
+        <Email>jane.doe@example.com</Email>
+      </Contact>
+    </FilingInfo>
+
+    <GeneralSection>
+      <RecJurCode>US</RecJurCode>
+
+      <GroupInfo>
+        <GroupName>Demo Group</GroupName>
+        <MneGroupId>DEMO-GROUP-001</MneGroupId>
+      </GroupInfo>
+
+      <CorporateStructure>
+        <CE>
+          <ID>
+            <Name>Demo Ultimate Parent Entity Ltd</Name>
+            <ResCountryCode>US</ResCountryCode>
+            <TIN>US-99-1234567</TIN>
+            <Rules>GIR205</Rules>
+            <GlobeStatus>GIR301</GlobeStatus>
+          </ID>
+          <EntityType>UPE</EntityType>
+          <InScope>true</InScope>
+          <InclusionDate>2019-07-01</InclusionDate>
+        </CE>
+
+        <CE>
+          <ID>
+            <Name>Demo Sub Co UK Ltd</Name>
+            <ResCountryCode>GB</ResCountryCode>
+            <TIN>GB-987654321</TIN>
+            <Rules>GIR205</Rules>
+            <GlobeStatus>GIR302</GlobeStatus>
+          </ID>
+          <EntityType>ConstituentEntity</EntityType>
+          <InScope>true</InScope>
+          <InclusionDate>2021-01-15</InclusionDate>
+        </CE>
+      </CorporateStructure>
+    </GeneralSection>
+
+    <JurisdictionSection>
+      <Jurisdiction>US</Jurisdiction>
+      <LocalCurrency>USD</LocalCurrency>
+
+      <Summary>
+        <RecJurCode>US</RecJurCode>
+        <TotalRevenue>10000000.00</TotalRevenue>
+        <ProfitOrLossBeforeTax>2500000.00</ProfitOrLossBeforeTax>
+        <CoveredTaxes>500000.00</CoveredTaxes>
+        <EffectiveTaxRate>0.20</EffectiveTaxRate>
+      </Summary>
+
+      <TopUpTax>
+        <TopUpTaxAmount>0.00</TopUpTaxAmount>
+        <QDMTTApplicable>false</QDMTTApplicable>
+      </TopUpTax>
+    </JurisdictionSection>
+
+    <JurisdictionSection>
+      <Jurisdiction>GB</Jurisdiction>
+      <LocalCurrency>GBP</LocalCurrency>
+
+      <Summary>
+        <RecJurCode>GB</RecJurCode>
+        <TotalRevenue>3000000.00</TotalRevenue>
+        <ProfitOrLossBeforeTax>400000.00</ProfitOrLossBeforeTax>
+        <CoveredTaxes>50000.00</CoveredTaxes>
+        <EffectiveTaxRate>0.125</EffectiveTaxRate>
+      </Summary>
+
+      <TopUpTax>
+        <TopUpTaxAmount>20000.00</TopUpTaxAmount>
+        <QDMTTApplicable>true</QDMTTApplicable>
+      </TopUpTax>
+    </JurisdictionSection>
+  </GLOBEBody>
+</GLOBE_OECD>
