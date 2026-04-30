@@ -1,0 +1,3665 @@
+{
+  "schema_version": "1.0",
+  "name": "Pillar 2 workflow templates",
+  "structure": {
+    "level_1": "Workflow phases",
+    "level_2": "Parent tasks shown on the workplan dashboard",
+    "level_3": "Checklist items nested inside parent tasks",
+    "evidence_model": "Grouped evidence pack, with individual evidence items nested inside each evidence group"
+  },
+  "standard_phases": [
+    "Applicability and legal basis",
+    "Filing entity and filing route",
+    "Entity and jurisdiction scoping",
+    "Data collection",
+    "Reconciliation and technical analysis",
+    "Return / report preparation",
+    "Review and approval",
+    "Submission / payment",
+    "Post-filing monitoring",
+    "Evidence archive"
+  ],
+  "standard_parent_task_metadata": [
+    "task_owner",
+    "reviewer",
+    "due_date",
+    "statutory_deadline_link",
+    "status",
+    "blocker",
+    "risk_rating",
+    "dependencies",
+    "evidence_required",
+    "evidence_status"
+  ],
+  "standard_evidence_metadata": [
+    "evidence_name",
+    "jurisdiction",
+    "period",
+    "entity_or_entities_covered",
+    "source",
+    "prepared_by",
+    "reviewed_by",
+    "version",
+    "acceptance_criteria",
+    "storage_location",
+    "related_task",
+    "related_filing_field"
+  ],
+  "parent_task_status_options": [
+    "Not started",
+    "In progress",
+    "Blocked",
+    "Under review",
+    "Complete",
+    "Not applicable"
+  ],
+  "evidence_group_status_options": [
+    "Not started",
+    "Partially collected",
+    "Complete",
+    "Under review",
+    "Reviewed",
+    "Final",
+    "Not applicable"
+  ],
+  "evidence_item_status_options": [
+    "Required",
+    "Requested",
+    "Received",
+    "Reviewed",
+    "Final",
+    "Not applicable",
+    "Replaced / superseded"
+  ],
+  "obligations": [
+    {
+      "obligation_type": "GIR filing",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm GIR applicability, legal basis and deadline",
+          "checklist": [
+            "Confirm whether a GIR filing obligation exists for the jurisdiction and fiscal year",
+            "Confirm legal source",
+            "Confirm filing deadline",
+            "Confirm due-date formula",
+            "Confirm whether this is a first-year / transitional filing period",
+            "Confirm whether any local extensions, transitional rules or administrative concessions apply",
+            "Record source last-reviewed date",
+            "Mark obligation status: applies, does not apply, monitor only, or awaiting confirmation"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm GIR filing entity and filing route",
+          "checklist": [
+            "Confirm filing entity: UPE, designated filing entity, local constituent entity, or other authorised entity",
+            "Confirm whether the GIR will be filed locally, centrally, or through exchange of information",
+            "Confirm whether the local jurisdiction accepts GIR information through exchange",
+            "Confirm whether domestic filing is still required",
+            "Confirm fallback filing requirement if exchange is unavailable, delayed, incomplete, or rejected",
+            "Confirm whether a designated filing entity appointment or authorisation is required",
+            "Confirm who has authority to approve and submit the filing"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm entity and jurisdiction scope",
+          "checklist": [
+            "Confirm constituent entities covered",
+            "Confirm permanent establishments covered",
+            "Confirm joint ventures covered",
+            "Confirm investment entities covered",
+            "Confirm minority-owned entities covered",
+            "Confirm stateless entities covered",
+            "Confirm excluded entities",
+            "Confirm jurisdictions covered by the GIR",
+            "Reconcile entity list to legal entity master data and group structure chart"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Confirm GIR schema, format and submission requirements",
+          "checklist": [
+            "Confirm applicable GIR schema version",
+            "Confirm local filing format: XML, portal form, PDF, local return, or other format",
+            "Confirm language requirements",
+            "Confirm currency requirements",
+            "Confirm portal requirements",
+            "Confirm attachment requirements",
+            "Confirm signatory requirements",
+            "Confirm whether pre-submission validation is available or required"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Map GIR data requirements to source systems and owners",
+          "checklist": [
+            "Map GIR data fields to source systems",
+            "Assign data owners by field",
+            "Identify data fields sourced from CbCR",
+            "Identify data fields sourced from consolidated financial statements",
+            "Identify data fields sourced from local statutory accounts",
+            "Identify data fields sourced from tax provision files",
+            "Identify data fields sourced from legal entity management systems",
+            "Identify data fields sourced from local tax teams",
+            "Identify gaps, manual inputs and judgement areas"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect GIR source data",
+          "checklist": [
+            "Issue GIR data request",
+            "Collect consolidation data",
+            "Collect CbCR data",
+            "Collect local statutory account data",
+            "Collect tax provision data",
+            "Collect legal entity data",
+            "Collect ownership data",
+            "Collect local tax data",
+            "Track missing, late or incomplete responses",
+            "Resolve data ownership disputes"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Validate and reconcile GIR data",
+          "checklist": [
+            "Validate legal entity population",
+            "Validate jurisdiction population",
+            "Reconcile GIR inputs to CbCR",
+            "Reconcile GIR inputs to consolidated financial statements",
+            "Reconcile GIR inputs to local statutory accounts, where relevant",
+            "Reconcile GIR inputs to tax provision files",
+            "Reconcile GIR inputs to QDMTT calculations",
+            "Perform completeness review",
+            "Perform reasonableness review",
+            "Document exceptions and unresolved limitations"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Confirm safe harbour, QDMTT, IIR and UTPR interactions",
+          "checklist": [
+            "Confirm safe harbour positions",
+            "Confirm safe harbour disclosures required in the GIR",
+            "Confirm QDMTT interactions",
+            "Confirm IIR interactions",
+            "Confirm UTPR interactions",
+            "Confirm local top-up tax interactions",
+            "Confirm whether elections or designations affect the GIR",
+            "Cross-reference to safe harbour assessment workflow",
+            "Cross-reference to QDMTT / IIR / UTPR workflows"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare GIR data pack and filing output",
+          "checklist": [
+            "Prepare GIR data pack",
+            "Prepare filing output",
+            "Prepare XML, portal file, local form, or other submission format",
+            "Run schema validation, where applicable",
+            "Run portal validation, where applicable",
+            "Resolve validation errors",
+            "Version-control final filing file",
+            "Prepare filing summary for approver"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Complete technical review and final approval",
+          "checklist": [
+            "Complete technical review",
+            "Confirm reviewer has access to data pack and reconciliations",
+            "Confirm open issues have been resolved or escalated",
+            "Confirm filing position is approved",
+            "Confirm authorised submitter",
+            "Confirm final filing version is locked"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit GIR and monitor filing status",
+          "checklist": [
+            "Submit GIR",
+            "Store submission timestamp",
+            "Store filed version",
+            "Store portal confirmation",
+            "Store filing receipt",
+            "Monitor GIR status messages",
+            "Monitor rejection notices",
+            "Monitor exchange errors",
+            "Correct and resubmit if required",
+            "Escalate material errors"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive GIR evidence pack",
+          "checklist": [
+            "Confirm all required evidence has been uploaded",
+            "Confirm evidence is version-controlled",
+            "Confirm final filed version is stored",
+            "Confirm reviewer approval is stored",
+            "Confirm filing receipt is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "GIR applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Due-date calculation support",
+            "First-year / transitional filing analysis, where relevant",
+            "Local extension, concession or administrative guidance support, where relevant"
+          ]
+        },
+        {
+          "group": "Filing route and filing entity",
+          "items": [
+            "Filing entity confirmation",
+            "Designated filing entity appointment or authorisation",
+            "GIR filing route memo",
+            "Exchange route / fallback filing analysis",
+            "Authorised submitter confirmation",
+            "Local domestic filing requirement analysis, where relevant"
+          ]
+        },
+        {
+          "group": "Entity and jurisdiction scoping",
+          "items": [
+            "Constituent entity scoping list",
+            "Jurisdiction coverage list",
+            "Legal entity structure chart",
+            "PE / JV / investment entity / minority-owned entity analysis",
+            "Stateless entity analysis, where relevant",
+            "Excluded entity analysis, where relevant"
+          ]
+        },
+        {
+          "group": "Data collection and data lineage",
+          "items": [
+            "GIR data map by field",
+            "GIR data request",
+            "Completed GIR data pack",
+            "Data lineage matrix",
+            "Source system owner matrix",
+            "Data exception log"
+          ]
+        },
+        {
+          "group": "Reconciliations",
+          "items": [
+            "CbCR reconciliation",
+            "Consolidated financial statement reconciliation",
+            "Local statutory account reconciliation, where relevant",
+            "Tax provision file reconciliation, where relevant",
+            "QDMTT calculation reconciliation, where relevant",
+            "Group Pillar 2 model reconciliation, where relevant"
+          ]
+        },
+        {
+          "group": "Technical positions and interactions",
+          "items": [
+            "QDMTT / IIR / UTPR interaction analysis",
+            "Safe harbour support and disclosure cross-reference",
+            "Elections register extract",
+            "Local top-up tax interaction analysis, where relevant",
+            "Technical position memo, where relevant",
+            "Unresolved issue / limitation memo, where relevant"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final filing summary for approver",
+            "Final version control record"
+          ]
+        },
+        {
+          "group": "Filing and post-filing",
+          "items": [
+            "Filed GIR copy",
+            "Filing receipt / portal confirmation",
+            "Submission timestamp evidence",
+            "XML / portal validation report",
+            "Status message / rejection / error log",
+            "Amendment or correction memo, if relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location",
+            "Superseded version log, where relevant"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if exchange route is being relied on but local domestic filing may still be required",
+        "Alert if local jurisdiction requires notification even where GIR is filed elsewhere",
+        "Alert if GIR schema version differs from group default",
+        "Alert if safe harbour conclusion has not been approved before GIR preparation",
+        "Alert if QDMTT data differs from GIR data",
+        "Add local checklist item if jurisdiction requires local language filing",
+        "Add local checklist item if tax authority portal requires prior registration"
+      ]
+    },
+    {
+      "obligation_type": "QDMTT return",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm QDMTT applicability, legal basis and deadline",
+          "checklist": [
+            "Confirm whether local DMTT / QDMTT applies for the fiscal year",
+            "Confirm legal source",
+            "Confirm effective date",
+            "Confirm filing deadline",
+            "Confirm payment deadline",
+            "Confirm whether local legislation is enacted, draft, conditional, elective, or subject to thresholds",
+            "Confirm source last-reviewed date",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm local filing entity, liable entity and filing route",
+          "checklist": [
+            "Confirm local filing entity",
+            "Confirm liable entity or entities",
+            "Confirm whether liability is joint, several, allocated, or entity-specific",
+            "Confirm whether return is standalone, combined with another top-up tax return, or part of a corporate tax filing",
+            "Confirm portal, form, signatory and tax agent requirements",
+            "Confirm whether local registration is required before filing"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm local QDMTT entity scope",
+          "checklist": [
+            "Confirm local constituent entities included",
+            "Confirm permanent establishments included",
+            "Confirm joint ventures included",
+            "Confirm investment entities included",
+            "Confirm minority-owned entities included",
+            "Confirm excluded entities",
+            "Confirm whether local grouping differs from GIR grouping",
+            "Reconcile local QDMTT scope to GIR scope"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Map and collect QDMTT data",
+          "checklist": [
+            "Identify local QDMTT data requirements",
+            "Identify local differences from GIR data requirements",
+            "Confirm accounting standard",
+            "Confirm currency and FX method",
+            "Confirm tax credit treatment",
+            "Confirm deferred tax approach",
+            "Confirm local elections",
+            "Issue local QDMTT data request",
+            "Collect financial, tax, ownership and entity data",
+            "Track missing or incomplete local data"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Prepare and reconcile QDMTT calculation",
+          "checklist": [
+            "Prepare QDMTT calculation",
+            "Reconcile to local statutory accounts",
+            "Reconcile to group Pillar 2 model",
+            "Reconcile to GIR data",
+            "Confirm allocation of liability among local entities",
+            "Confirm payment amount",
+            "Document calculation assumptions",
+            "Document unresolved issues"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Confirm QDMTT safe harbour and local deviations",
+          "checklist": [
+            "Confirm whether local rule has qualified or transitional qualified status",
+            "Confirm whether QDMTT safe harbour treatment is available",
+            "Confirm whether QDMTT safe harbour is being claimed",
+            "Identify local deviations from standard GloBE rules",
+            "Document effect of local deviations on calculation",
+            "Cross-reference safe harbour assessment workflow",
+            "Cross-reference GIR disclosure"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare QDMTT return",
+          "checklist": [
+            "Prepare local QDMTT return",
+            "Complete required schedules",
+            "Attach required calculation support",
+            "Confirm language, currency and signatory requirements",
+            "Prepare local filing summary",
+            "Version-control draft and final return"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Complete QDMTT technical review and approval",
+          "checklist": [
+            "Complete technical review",
+            "Obtain local adviser review, where required",
+            "Resolve reviewer comments",
+            "Confirm payment requirement",
+            "Obtain final approval",
+            "Lock final return version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit QDMTT return and trigger payment workflow",
+          "checklist": [
+            "Submit QDMTT return",
+            "Store filed return",
+            "Store submission timestamp",
+            "Store filing receipt",
+            "Trigger payment workflow, if payment is due",
+            "Confirm payment reference",
+            "Confirm payment deadline"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor assessments, queries and amendments",
+          "checklist": [
+            "Monitor tax authority acceptance",
+            "Monitor tax authority queries",
+            "Monitor assessments",
+            "Assess whether amendment is required",
+            "Link to amendment workflow if required",
+            "Update risk register"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive QDMTT evidence pack",
+          "checklist": [
+            "Confirm all required evidence has been uploaded",
+            "Confirm calculation workbook is final",
+            "Confirm filed return and receipt are stored",
+            "Confirm payment evidence is linked",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "QDMTT applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Effective date analysis",
+            "Due-date calculation support",
+            "Payment deadline support",
+            "Enacted / draft / conditional legislation status support"
+          ]
+        },
+        {
+          "group": "Qualification status and safe harbour",
+          "items": [
+            "Central Record / qualified-status support",
+            "QDMTT safe harbour analysis",
+            "Local adoption or transitional qualified status support",
+            "QDMTT safe harbour claim support, where relevant",
+            "QDMTT safe harbour non-reliance memo, where relevant"
+          ]
+        },
+        {
+          "group": "Filing route, filing entity and liability",
+          "items": [
+            "Local filing entity confirmation",
+            "Liable entity confirmation",
+            "Liability allocation memo",
+            "Filing route / return type confirmation",
+            "Tax agent or representative support, where relevant",
+            "Local registration support, where relevant"
+          ]
+        },
+        {
+          "group": "Entity scoping",
+          "items": [
+            "Local entity scoping list",
+            "PE / JV / investment entity / minority-owned entity inclusion analysis",
+            "Local QDMTT group analysis",
+            "GIR-to-QDMTT scope comparison",
+            "Excluded entity analysis, where relevant"
+          ]
+        },
+        {
+          "group": "Local data collection",
+          "items": [
+            "QDMTT data request",
+            "Completed local data pack",
+            "Accounting standard support",
+            "Currency and FX support",
+            "Tax credit analysis",
+            "Deferred tax support",
+            "Local elections support"
+          ]
+        },
+        {
+          "group": "Calculation and reconciliations",
+          "items": [
+            "QDMTT calculation workbook",
+            "Local statutory accounts reconciliation",
+            "GIR-to-QDMTT reconciliation",
+            "Group Pillar 2 model reconciliation",
+            "Payment requirement analysis",
+            "Calculation assumptions and limitation log"
+          ]
+        },
+        {
+          "group": "Local deviations and technical positions",
+          "items": [
+            "Local deviations matrix",
+            "Local law interpretation memo, where relevant",
+            "Local adviser technical note, where relevant",
+            "Treatment of tax credits, deferred taxes and local elections",
+            "Technical issue log"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Local adviser review",
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final return version control record"
+          ]
+        },
+        {
+          "group": "Filing, payment and post-filing",
+          "items": [
+            "Filed QDMTT return",
+            "Filing receipt",
+            "Payment evidence link",
+            "Assessment / amendment / query log",
+            "Tax authority correspondence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location",
+            "Superseded version log, where relevant"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if QDMTT qualification status is uncertain",
+        "Alert if local QDMTT data differs from GIR data",
+        "Alert if payment deadline differs from filing deadline",
+        "Alert if return is combined with IIR / UTPR / local top-up tax return",
+        "Add local checklist item if QDMTT must be calculated using local accounting standard",
+        "Add local checklist item if a tax agent or power of attorney is required"
+      ]
+    },
+    {
+      "obligation_type": "GIR notification",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm GIR notification applicability, legal basis and deadline",
+          "checklist": [
+            "Confirm whether notification is required",
+            "Confirm legal source",
+            "Confirm notification deadline",
+            "Confirm due-date formula",
+            "Confirm whether notification is annual, one-off, event-driven, or required only when facts change",
+            "Confirm source last-reviewed date",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm notifying entity and GIR filing route",
+          "checklist": [
+            "Confirm notifying entity",
+            "Confirm tax identification details",
+            "Confirm GIR filing entity",
+            "Confirm whether GIR will be filed by UPE, designated filing entity, local entity, or other entity",
+            "Confirm whether GIR is expected through exchange",
+            "Confirm whether local filing is still required",
+            "Confirm fallback if GIR is not exchanged successfully"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm local entities and required notification scope",
+          "checklist": [
+            "Confirm whether local constituent entities must be listed",
+            "Confirm whether PEs must be disclosed",
+            "Confirm whether JVs must be disclosed",
+            "Confirm whether investment entities must be disclosed",
+            "Confirm whether stateless entities must be disclosed",
+            "Confirm period covered by notification",
+            "Reconcile entity list to GIR scope"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect notification data",
+          "checklist": [
+            "Identify required notification fields",
+            "Collect notifying entity details",
+            "Collect GIR filing entity details",
+            "Collect local constituent entity details",
+            "Collect tax IDs",
+            "Collect addresses and contact details",
+            "Collect period details",
+            "Confirm submission method"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare GIR notification",
+          "checklist": [
+            "Prepare notification",
+            "Complete required form, portal data or letter",
+            "Attach local entity list, if required",
+            "Confirm consistency with GIR filing route",
+            "Confirm consistency with designated filing entity support",
+            "Version-control draft notification"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve GIR notification",
+          "checklist": [
+            "Review against legal requirements",
+            "Review against GIR filing route",
+            "Resolve comments",
+            "Obtain approval from authorised person",
+            "Lock final notification version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit GIR notification",
+          "checklist": [
+            "Submit notification",
+            "Store submitted version",
+            "Store submission timestamp",
+            "Store portal receipt or email confirmation",
+            "Confirm successful submission"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor notification acceptance or corrections",
+          "checklist": [
+            "Track acceptance",
+            "Track rejection",
+            "Track clarification request",
+            "Correct and resubmit if required",
+            "Escalate if notification affects GIR filing route"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive GIR notification evidence pack",
+          "checklist": [
+            "Confirm legal basis evidence is stored",
+            "Confirm submitted notification is stored",
+            "Confirm receipt is stored",
+            "Confirm reviewer approval is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Notification applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Due-date calculation support",
+            "Annual / one-off / event-driven notification analysis",
+            "Source last-reviewed confirmation"
+          ]
+        },
+        {
+          "group": "Notifying entity and GIR filing route",
+          "items": [
+            "Notifying entity confirmation",
+            "Local tax ID confirmation",
+            "GIR filing entity confirmation",
+            "Designated filing entity support",
+            "Exchange route support",
+            "Local filing fallback support, where relevant"
+          ]
+        },
+        {
+          "group": "Local entity scope",
+          "items": [
+            "Local constituent entity list",
+            "PE / JV / investment entity inclusion analysis",
+            "Stateless entity inclusion analysis, where relevant",
+            "Period covered by notification",
+            "GIR scope reconciliation"
+          ]
+        },
+        {
+          "group": "Notification data",
+          "items": [
+            "Notification data pack",
+            "Filing entity details",
+            "Local entity details",
+            "Tax ID and address support",
+            "Contact details support",
+            "Required field checklist"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Draft notification",
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final notification version control record"
+          ]
+        },
+        {
+          "group": "Submission and post-submission",
+          "items": [
+            "Submitted notification",
+            "Filing receipt / portal confirmation",
+            "Submission timestamp evidence",
+            "Rejection or clarification log",
+            "Correction / resubmission evidence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if notification is due before GIR filing",
+        "Alert if notification is required even though GIR is filed centrally",
+        "Alert if the notifying entity differs from the local filing or payment entity",
+        "Add local checklist item if notification is required only when facts change",
+        "Add local checklist item if notification must include all local constituent entities"
+      ]
+    },
+    {
+      "obligation_type": "Registration / portal access",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm registration requirement, legal basis and deadline",
+          "checklist": [
+            "Confirm whether registration is required",
+            "Confirm whether registration is required before filing, payment, notification, or only on request",
+            "Confirm legal source",
+            "Confirm registration deadline",
+            "Confirm processing lead time",
+            "Confirm source last-reviewed date",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm registering entity and registration route",
+          "checklist": [
+            "Confirm registering entity: UPE, local entity, tax agent, representative, or group-level registrant",
+            "Confirm whether entity already has local tax ID",
+            "Confirm whether entity already has portal account",
+            "Confirm whether new Pillar 2 tax account is required",
+            "Confirm whether local representative is required",
+            "Confirm whether tax agent appointment is required"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect registration information and authorisations",
+          "checklist": [
+            "Collect legal entity details",
+            "Collect tax IDs",
+            "Collect addresses",
+            "Collect contact details",
+            "Collect authorised signatory details",
+            "Collect beneficial ownership or group details, where required",
+            "Collect tax agent details, where required",
+            "Obtain power of attorney, where required",
+            "Obtain board resolution or delegation of authority, where required"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare registration submission",
+          "checklist": [
+            "Prepare registration form or portal submission",
+            "Attach required documents",
+            "Confirm format and language requirements",
+            "Confirm registration data is complete",
+            "Confirm no passwords are stored in evidence pack",
+            "Version-control registration pack"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve registration submission",
+          "checklist": [
+            "Review registration data",
+            "Review authorisation documents",
+            "Resolve missing information",
+            "Obtain approval to submit",
+            "Confirm authorised submitter"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit registration and obtain access",
+          "checklist": [
+            "Submit registration",
+            "Store submission confirmation",
+            "Track processing status",
+            "Store registration receipt",
+            "Store new tax ID or account confirmation",
+            "Escalate if registration may block filing or payment"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Test portal access and monitor processing",
+          "checklist": [
+            "Confirm portal access works",
+            "Confirm credential owner",
+            "Confirm backup credential owner",
+            "Confirm multi-factor authentication process",
+            "Confirm ability to file, pay or amend, where relevant",
+            "Monitor outstanding authority actions"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive registration evidence pack",
+          "checklist": [
+            "Confirm registration source evidence is stored",
+            "Confirm registration data pack is stored",
+            "Confirm portal confirmation is stored",
+            "Confirm access test evidence is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Registration applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Registration deadline support",
+            "Registration lead-time support",
+            "Filing / payment dependency analysis"
+          ]
+        },
+        {
+          "group": "Registering entity and account status",
+          "items": [
+            "Registering entity confirmation",
+            "Existing tax ID / portal account check",
+            "New tax ID / Pillar 2 account requirement support",
+            "Local representative requirement analysis",
+            "Tax agent requirement analysis"
+          ]
+        },
+        {
+          "group": "Registration data and authorisations",
+          "items": [
+            "Registration data pack",
+            "Authorised signatory evidence",
+            "Board resolution or delegation of authority",
+            "Tax agent appointment",
+            "Power of attorney",
+            "Beneficial ownership or group information support, where relevant"
+          ]
+        },
+        {
+          "group": "Registration submission",
+          "items": [
+            "Submitted registration form",
+            "Portal submission confirmation",
+            "Registration receipt",
+            "Tax authority processing status evidence",
+            "Registration rejection / clarification log, where relevant"
+          ]
+        },
+        {
+          "group": "Portal access and controls",
+          "items": [
+            "New tax ID / Pillar 2 account confirmation",
+            "Portal access test confirmation",
+            "Credential ownership record, excluding passwords",
+            "Backup credential owner record",
+            "Multi-factor authentication process confirmation",
+            "Filing / payment access test confirmation, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if registration is required before filing",
+        "Alert if registration is required before payment",
+        "Alert if tax agent appointment or power of attorney is required",
+        "Alert if portal access has not been tested",
+        "Add local checklist item if registration lead time exceeds internal filing timetable"
+      ]
+    },
+    {
+      "obligation_type": "Local additional information report",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm additional local reporting requirement and deadline",
+          "checklist": [
+            "Confirm whether the jurisdiction requires an additional local information report",
+            "Confirm legal source",
+            "Confirm deadline",
+            "Confirm due-date formula",
+            "Confirm whether report is in addition to or instead of another filing",
+            "Confirm source last-reviewed date",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm reporting entity and submission route",
+          "checklist": [
+            "Confirm reporting entity",
+            "Confirm portal, form, email, paper or other submission route",
+            "Confirm signatory requirements",
+            "Confirm tax agent requirements",
+            "Confirm language requirements",
+            "Confirm currency requirements",
+            "Confirm attachment requirements"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm report scope",
+          "checklist": [
+            "Confirm whether report applies to the group, local entity, PE, JV, or specific entity category",
+            "Confirm period covered",
+            "Confirm entities included",
+            "Confirm jurisdictions included",
+            "Confirm whether report overlaps with GIR",
+            "Confirm whether report overlaps with QDMTT, IIR or UTPR return"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Map and collect local report data",
+          "checklist": [
+            "Identify required information fields",
+            "Identify overlap with GIR",
+            "Identify overlap with QDMTT return",
+            "Identify overlap with CbCR",
+            "Identify overlap with local statutory accounts",
+            "Identify data fields that differ from group model",
+            "Issue local data request",
+            "Collect required local data",
+            "Track missing or incomplete responses"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Reconcile local report data to GIR and local sources",
+          "checklist": [
+            "Reconcile to GIR",
+            "Reconcile to QDMTT / IIR / UTPR calculations, where relevant",
+            "Reconcile to local statutory accounts",
+            "Reconcile to group Pillar 2 model",
+            "Document differences",
+            "Resolve inconsistencies",
+            "Escalate unresolved issues"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare local information report",
+          "checklist": [
+            "Prepare local report",
+            "Complete required schedules",
+            "Attach required documents",
+            "Confirm language and formatting requirements",
+            "Version-control draft and final report",
+            "Prepare filing summary"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve local information report",
+          "checklist": [
+            "Complete technical review",
+            "Complete local adviser review, where required",
+            "Resolve comments",
+            "Obtain final approval",
+            "Lock final report version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit local information report",
+          "checklist": [
+            "Submit report",
+            "Store submitted version",
+            "Store submission timestamp",
+            "Store filing receipt",
+            "Confirm successful submission"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor authority response or correction requests",
+          "checklist": [
+            "Monitor acceptance",
+            "Monitor rejection",
+            "Monitor clarification requests",
+            "Correct and resubmit if required",
+            "Link to amendment workflow if needed"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive local report evidence pack",
+          "checklist": [
+            "Confirm all evidence is uploaded",
+            "Confirm filed report is stored",
+            "Confirm receipt is stored",
+            "Confirm reviewer approval is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Additional reporting applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Due-date calculation support",
+            "Effective date support",
+            "In-addition-to / instead-of filing analysis"
+          ]
+        },
+        {
+          "group": "Reporting entity and submission route",
+          "items": [
+            "Reporting entity confirmation",
+            "Submission route confirmation",
+            "Portal / form / email / paper filing support",
+            "Signatory requirement support",
+            "Tax agent requirement support",
+            "Language and currency requirement support"
+          ]
+        },
+        {
+          "group": "Report scope",
+          "items": [
+            "Entity scope support",
+            "Jurisdiction scope support",
+            "Period covered by report",
+            "GIR overlap analysis",
+            "QDMTT / IIR / UTPR overlap analysis"
+          ]
+        },
+        {
+          "group": "Data collection",
+          "items": [
+            "Required data field matrix",
+            "Local data request",
+            "Completed local data pack",
+            "Data source owner matrix",
+            "Local data exception log",
+            "Translation or language review"
+          ]
+        },
+        {
+          "group": "Reconciliations",
+          "items": [
+            "GIR-to-local-report reconciliation",
+            "QDMTT / IIR / UTPR reconciliation",
+            "Local statutory accounts reconciliation",
+            "Group Pillar 2 model reconciliation",
+            "Difference analysis"
+          ]
+        },
+        {
+          "group": "Report preparation",
+          "items": [
+            "Draft local report",
+            "Required schedules",
+            "Required attachments",
+            "Filing summary",
+            "Final report version control record"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Local adviser review, where relevant",
+            "Final approver sign-off",
+            "Review comment log"
+          ]
+        },
+        {
+          "group": "Filing and post-filing",
+          "items": [
+            "Submitted report",
+            "Submission receipt",
+            "Error / rejection / clarification log",
+            "Correction / resubmission evidence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if report is due before GIR or local return",
+        "Alert if local report uses different data definitions from GIR",
+        "Alert if language translation is required",
+        "Add local checklist item if report must be filed by a local tax agent"
+      ]
+    },
+    {
+      "obligation_type": "IIR return",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm IIR applicability, legal basis and deadline",
+          "checklist": [
+            "Confirm whether the jurisdiction has implemented an IIR",
+            "Confirm whether the IIR applies to the group for the fiscal year",
+            "Confirm legal source",
+            "Confirm effective date",
+            "Confirm filing deadline",
+            "Confirm payment deadline",
+            "Confirm whether the IIR has qualified or transitional qualified status",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm IIR filing entity and return route",
+          "checklist": [
+            "Confirm filing entity",
+            "Confirm whether filing entity is UPE, IPE, POPE, or other parent entity",
+            "Confirm local return format",
+            "Confirm portal requirements",
+            "Confirm language requirements",
+            "Confirm currency requirements",
+            "Confirm signatory requirements",
+            "Confirm attachment requirements"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm parent entity status and ownership chain",
+          "checklist": [
+            "Confirm parent entity classification",
+            "Confirm ownership chain",
+            "Confirm whether intermediate parent rules apply",
+            "Confirm whether partially owned parent rules apply",
+            "Confirm whether ownership changes occurred during the period",
+            "Confirm affected low-taxed jurisdictions",
+            "Reconcile ownership data to legal entity master data"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Identify IIR top-up tax exposure",
+          "checklist": [
+            "Identify low-taxed jurisdictions",
+            "Confirm whether top-up tax is allocated to the filing jurisdiction",
+            "Confirm whether QDMTT reduces IIR exposure",
+            "Confirm whether QDMTT safe harbour reduces IIR exposure",
+            "Confirm whether local top-up tax reduces IIR exposure",
+            "Confirm whether safe harbours eliminate or reduce IIR computations",
+            "Document exposure conclusion"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect IIR data and model outputs",
+          "checklist": [
+            "Issue IIR data request",
+            "Collect group Pillar 2 model outputs",
+            "Collect ownership data",
+            "Collect low-taxed jurisdiction data",
+            "Collect QDMTT data",
+            "Collect safe harbour data",
+            "Collect financial statement provision data",
+            "Track missing or incomplete data"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Prepare and reconcile IIR calculation",
+          "checklist": [
+            "Prepare IIR calculation",
+            "Prepare top-up tax allocation",
+            "Reconcile to GIR",
+            "Reconcile to group Pillar 2 model",
+            "Reconcile to QDMTT returns",
+            "Reconcile to financial statement provision",
+            "Confirm payment amount",
+            "Document assumptions and unresolved issues"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare IIR return",
+          "checklist": [
+            "Prepare IIR return",
+            "Complete required schedules",
+            "Attach required calculation support",
+            "Prepare filing summary",
+            "Version-control draft and final return"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve IIR return",
+          "checklist": [
+            "Complete technical review",
+            "Obtain local adviser review, where relevant",
+            "Resolve review comments",
+            "Obtain final approval",
+            "Lock final return version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit IIR return and trigger payment workflow",
+          "checklist": [
+            "Submit IIR return",
+            "Store filed return",
+            "Store submission timestamp",
+            "Store filing receipt",
+            "Trigger payment workflow, if payment is due",
+            "Confirm payment reference and payment deadline"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor assessments, queries and amendments",
+          "checklist": [
+            "Monitor tax authority acceptance",
+            "Monitor tax authority queries",
+            "Monitor assessments",
+            "Assess whether amendment is required",
+            "Link to amendment workflow if required"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive IIR evidence pack",
+          "checklist": [
+            "Confirm all required evidence has been uploaded",
+            "Confirm filed return and receipt are stored",
+            "Confirm calculation workbook is stored",
+            "Confirm approval evidence is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "IIR applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Effective date analysis",
+            "Due-date calculation support",
+            "Payment deadline support",
+            "Central Record / qualified-status support"
+          ]
+        },
+        {
+          "group": "Filing entity and parent entity status",
+          "items": [
+            "Filing entity confirmation",
+            "Parent entity status support",
+            "UPE / IPE / POPE classification support",
+            "Filing route confirmation",
+            "Local return format and submission route support",
+            "Signatory and authorisation support"
+          ]
+        },
+        {
+          "group": "Ownership chain and entity scope",
+          "items": [
+            "Ownership chain support",
+            "Intermediate parent rule analysis, where relevant",
+            "Partially owned parent rule analysis, where relevant",
+            "Ownership change analysis, where relevant",
+            "Affected low-taxed jurisdiction list",
+            "Legal entity master data reconciliation"
+          ]
+        },
+        {
+          "group": "IIR exposure and technical interactions",
+          "items": [
+            "Low-taxed jurisdiction analysis",
+            "QDMTT offset / safe harbour support",
+            "Safe harbour interaction memo",
+            "Local top-up tax interaction analysis",
+            "IIR allocation position memo",
+            "Technical limitation or uncertainty log"
+          ]
+        },
+        {
+          "group": "Data collection",
+          "items": [
+            "IIR data request",
+            "Completed IIR data pack",
+            "Group Pillar 2 model outputs",
+            "Ownership data support",
+            "QDMTT data support",
+            "Safe harbour data support",
+            "Financial statement provision data support"
+          ]
+        },
+        {
+          "group": "Calculation and reconciliations",
+          "items": [
+            "IIR calculation workbook",
+            "Top-up tax allocation support",
+            "GIR reconciliation",
+            "Group Pillar 2 model reconciliation",
+            "QDMTT return reconciliation",
+            "Financial statement provision reconciliation",
+            "Payment requirement analysis"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Local adviser review",
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final return version control record"
+          ]
+        },
+        {
+          "group": "Filing, payment and post-filing",
+          "items": [
+            "Filed IIR return",
+            "Filing receipt",
+            "Payment evidence link",
+            "Assessment / amendment / query log",
+            "Tax authority correspondence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if parent entity status is uncertain",
+        "Alert if QDMTT data is not final",
+        "Alert if ownership changes occurred during the year",
+        "Alert if payment deadline differs from return deadline",
+        "Add local checklist item if IIR return is combined with another local top-up tax return"
+      ]
+    },
+    {
+      "obligation_type": "UTPR return",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm UTPR applicability, legal basis and deadline",
+          "checklist": [
+            "Confirm whether jurisdiction has implemented UTPR",
+            "Confirm whether UTPR applies for the fiscal year",
+            "Confirm legal source",
+            "Confirm effective date",
+            "Confirm filing deadline",
+            "Confirm payment deadline",
+            "Confirm whether UTPR has qualified or transitional qualified status",
+            "Confirm transitional UTPR relief, if relevant",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm UTPR filing entity and submission route",
+          "checklist": [
+            "Confirm local filing entity",
+            "Confirm local liable entity",
+            "Confirm return format",
+            "Confirm portal requirements",
+            "Confirm language requirements",
+            "Confirm currency requirements",
+            "Confirm signatory requirements",
+            "Confirm attachment requirements"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm local UTPR obligation and allocation basis",
+          "checklist": [
+            "Confirm whether local entity is subject to UTPR filing obligation",
+            "Confirm whether local entity is subject to UTPR payment obligation",
+            "Confirm allocation method",
+            "Confirm employee-based allocation data required",
+            "Confirm tangible asset allocation data required",
+            "Confirm local law deviations from standard allocation formula",
+            "Confirm whether local return is standalone or combined"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Identify residual top-up tax subject to UTPR",
+          "checklist": [
+            "Identify low-taxed jurisdictions not fully taxed under IIR",
+            "Identify low-taxed jurisdictions not fully taxed under QDMTT",
+            "Confirm residual top-up tax amount",
+            "Confirm QDMTT coverage",
+            "Confirm IIR coverage",
+            "Confirm safe harbour impacts",
+            "Document UTPR exposure conclusion"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect UTPR allocation data",
+          "checklist": [
+            "Issue UTPR data request",
+            "Collect group Pillar 2 model outputs",
+            "Collect IIR data",
+            "Collect QDMTT data",
+            "Collect employee data",
+            "Collect tangible asset data",
+            "Collect local entity data",
+            "Track missing or incomplete data"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Prepare and reconcile UTPR allocation calculation",
+          "checklist": [
+            "Prepare UTPR allocation calculation",
+            "Reconcile residual top-up tax to GIR",
+            "Reconcile residual top-up tax to group Pillar 2 model",
+            "Reconcile allocation factors to source data",
+            "Confirm local payment amount",
+            "Document assumptions",
+            "Document unresolved issues"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare UTPR return",
+          "checklist": [
+            "Prepare UTPR return",
+            "Complete required schedules",
+            "Attach allocation support",
+            "Prepare filing summary",
+            "Version-control draft and final return"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve UTPR return",
+          "checklist": [
+            "Complete technical review",
+            "Obtain local adviser review, where relevant",
+            "Resolve comments",
+            "Obtain final approval",
+            "Lock final return version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit UTPR return and trigger payment workflow",
+          "checklist": [
+            "Submit UTPR return",
+            "Store filed return",
+            "Store submission timestamp",
+            "Store filing receipt",
+            "Trigger payment workflow, if payment is due"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor assessments, queries and amendments",
+          "checklist": [
+            "Monitor tax authority acceptance",
+            "Monitor tax authority queries",
+            "Monitor assessments",
+            "Assess whether amendment is required",
+            "Link to amendment workflow if required"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive UTPR evidence pack",
+          "checklist": [
+            "Confirm all required evidence has been uploaded",
+            "Confirm filed return and receipt are stored",
+            "Confirm calculation workbook is stored",
+            "Confirm approval evidence is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "UTPR applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Effective date analysis",
+            "Due-date calculation support",
+            "Payment deadline support",
+            "Central Record / qualified-status support",
+            "Transitional UTPR relief analysis"
+          ]
+        },
+        {
+          "group": "Filing entity and local obligation",
+          "items": [
+            "Local entity obligation confirmation",
+            "Filing entity confirmation",
+            "Liable entity confirmation",
+            "Submission route support",
+            "Local return format support",
+            "Signatory and authorisation support"
+          ]
+        },
+        {
+          "group": "UTPR exposure and allocation basis",
+          "items": [
+            "Low-taxed jurisdiction analysis",
+            "IIR / QDMTT coverage analysis",
+            "Residual top-up tax analysis",
+            "UTPR allocation methodology memo",
+            "Local law allocation deviation analysis",
+            "UTPR exposure conclusion"
+          ]
+        },
+        {
+          "group": "Allocation data collection",
+          "items": [
+            "UTPR data request",
+            "Completed UTPR data pack",
+            "Group Pillar 2 model outputs",
+            "IIR data support",
+            "QDMTT data support",
+            "Employee data support",
+            "Tangible asset data support",
+            "Local entity data support"
+          ]
+        },
+        {
+          "group": "Calculation and reconciliations",
+          "items": [
+            "UTPR allocation workbook",
+            "GIR reconciliation",
+            "Group Pillar 2 model reconciliation",
+            "Allocation factor reconciliation",
+            "Payment requirement analysis",
+            "Calculation assumptions and limitation log"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Local adviser review",
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final return version control record"
+          ]
+        },
+        {
+          "group": "Filing, payment and post-filing",
+          "items": [
+            "Filed UTPR return",
+            "Filing receipt",
+            "Payment evidence link",
+            "Assessment / amendment / query log",
+            "Tax authority correspondence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if IIR and QDMTT coverage are not final",
+        "Alert if employee or tangible asset data is incomplete",
+        "Alert if transitional UTPR relief may apply",
+        "Alert if UTPR amount is generated by another jurisdiction’s under-taxed profits",
+        "Add local checklist item if local law uses a modified allocation formula"
+      ]
+    },
+    {
+      "obligation_type": "Combined local top-up tax return",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm combined return requirement, components and deadline",
+          "checklist": [
+            "Confirm whether jurisdiction requires a combined Pillar 2 / top-up tax return",
+            "Confirm legal source",
+            "Confirm effective date",
+            "Confirm filing deadline",
+            "Confirm payment deadline",
+            "Confirm components included: QDMTT, IIR, UTPR, GIR data, notification data, local disclosures, payment declaration",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm filing entity, liable entities and submission route",
+          "checklist": [
+            "Confirm filing entity",
+            "Confirm liable entities",
+            "Confirm whether liability differs by component",
+            "Confirm portal or form",
+            "Confirm language requirements",
+            "Confirm currency requirements",
+            "Confirm signatory requirements",
+            "Confirm attachment requirements"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm entities and components in scope",
+          "checklist": [
+            "Confirm entities included",
+            "Confirm local constituent entities",
+            "Confirm PEs, JVs, investment entities and minority-owned entities",
+            "Confirm which components are applicable",
+            "Confirm which components are not applicable",
+            "Confirm whether any components are optional or elective",
+            "Reconcile scope to GIR and local returns"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Map and collect combined return data",
+          "checklist": [
+            "Map each return section to data source and owner",
+            "Issue combined return data request",
+            "Collect QDMTT data, if applicable",
+            "Collect IIR data, if applicable",
+            "Collect UTPR data, if applicable",
+            "Collect safe harbour disclosure data",
+            "Collect elections data",
+            "Collect payment declaration data",
+            "Track missing or inconsistent data"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Prepare component calculations and reconcile outputs",
+          "checklist": [
+            "Prepare QDMTT section, if applicable",
+            "Prepare IIR section, if applicable",
+            "Prepare UTPR section, if applicable",
+            "Prepare local disclosures",
+            "Prepare safe harbour disclosures",
+            "Prepare elections disclosures",
+            "Reconcile combined return to GIR",
+            "Reconcile combined return to group Pillar 2 model",
+            "Reconcile combined return to local statutory accounts",
+            "Reconcile combined return to payment calculation",
+            "Resolve inconsistencies across sections"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare combined return",
+          "checklist": [
+            "Prepare combined return",
+            "Complete required schedules",
+            "Attach required support",
+            "Prepare filing summary",
+            "Version-control draft and final return"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve combined return",
+          "checklist": [
+            "Complete technical review for each component",
+            "Obtain local adviser review, where relevant",
+            "Resolve review comments",
+            "Confirm payment amount",
+            "Obtain final approval",
+            "Lock final return version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit combined return and trigger payment workflow",
+          "checklist": [
+            "Submit combined return",
+            "Store filed return",
+            "Store submission timestamp",
+            "Store filing receipt",
+            "Trigger payment workflow, if payment is due"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor assessments, queries and amendments",
+          "checklist": [
+            "Monitor tax authority acceptance",
+            "Monitor queries",
+            "Monitor assessments",
+            "Assess whether amendment is required",
+            "Link to amendment workflow if required"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive combined return evidence pack",
+          "checklist": [
+            "Confirm all component evidence is uploaded",
+            "Confirm filed return and receipt are stored",
+            "Confirm approval evidence is stored",
+            "Confirm payment evidence is linked",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Combined return applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Effective date support",
+            "Due-date calculation support",
+            "Payment deadline support",
+            "Component mapping: QDMTT / IIR / UTPR / disclosures / payment"
+          ]
+        },
+        {
+          "group": "Filing entity and liability",
+          "items": [
+            "Filing entity confirmation",
+            "Liable entity confirmation",
+            "Component-level liability analysis",
+            "Submission route support",
+            "Signatory and authorisation support",
+            "Tax agent support, where relevant"
+          ]
+        },
+        {
+          "group": "Entity and component scope",
+          "items": [
+            "Entity scoping list",
+            "Local constituent entity list",
+            "PE / JV / investment entity / minority-owned entity analysis",
+            "Applicable component checklist",
+            "Non-applicable component support",
+            "GIR and local return scope reconciliation"
+          ]
+        },
+        {
+          "group": "Data collection",
+          "items": [
+            "Return data field matrix",
+            "Combined return data request",
+            "Completed combined return data pack",
+            "QDMTT data support",
+            "IIR data support",
+            "UTPR data support",
+            "Safe harbour disclosure support",
+            "Elections support",
+            "Payment declaration data support"
+          ]
+        },
+        {
+          "group": "Component calculations",
+          "items": [
+            "QDMTT calculation support",
+            "IIR calculation support",
+            "UTPR calculation support",
+            "Local top-up tax calculation support, where relevant",
+            "Payment calculation support",
+            "Calculation assumptions and limitations log"
+          ]
+        },
+        {
+          "group": "Reconciliations",
+          "items": [
+            "GIR reconciliation",
+            "Group Pillar 2 model reconciliation",
+            "Local statutory accounts reconciliation",
+            "Return-to-payment reconciliation",
+            "Cross-component consistency check",
+            "Difference analysis"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Local adviser review, where relevant",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final return version control record"
+          ]
+        },
+        {
+          "group": "Filing, payment and post-filing",
+          "items": [
+            "Filed combined return",
+            "Filing receipt",
+            "Payment evidence link",
+            "Assessment / amendment / query log",
+            "Tax authority correspondence, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if combined return includes a payment declaration",
+        "Alert if one component is ready but another is blocked",
+        "Alert if different components have different liable entities",
+        "Alert if safe harbour disclosure affects calculation sections",
+        "Add local checklist item if combined return replaces separate QDMTT / IIR / UTPR returns"
+      ]
+    },
+    {
+      "obligation_type": "Payment / instalment / balancing payment",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm payment obligation, type and deadline",
+          "checklist": [
+            "Confirm whether a Pillar 2 payment obligation exists",
+            "Classify payment type: estimated, instalment, final, balancing, amended, interest, penalty, or assessment payment",
+            "Confirm legal source",
+            "Confirm payment deadline",
+            "Confirm payment due-date formula",
+            "Confirm whether payment deadline differs from return deadline",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm liable entity, paying entity and payment process",
+          "checklist": [
+            "Confirm liable entity",
+            "Confirm paying entity",
+            "Confirm whether payment must be made by filing entity, local entity, tax agent, or another group entity",
+            "Confirm bank / portal process",
+            "Confirm whether local bank account is required",
+            "Confirm whether payment reference is required",
+            "Confirm cut-off time",
+            "Confirm whether registration is required before payment"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Confirm payment amount source and funding requirements",
+          "checklist": [
+            "Confirm payment amount source",
+            "Confirm calculation version",
+            "Confirm currency",
+            "Confirm FX rate",
+            "Confirm funding requirement",
+            "Confirm treasury lead time",
+            "Confirm whether withholding, bank charges or local restrictions apply"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Validate payment calculation and references",
+          "checklist": [
+            "Validate payment amount to return or calculation",
+            "Verify bank details using approved source",
+            "Confirm tax authority payment reference",
+            "Confirm beneficiary details",
+            "Confirm payment value date",
+            "Confirm no duplicate payment has been made",
+            "Confirm whether interest or penalties apply"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Obtain tax and treasury payment approvals",
+          "checklist": [
+            "Obtain tax approval",
+            "Obtain treasury approval",
+            "Obtain finance approval, if required",
+            "Confirm approval covers amount, currency, entity, beneficiary and value date",
+            "Store approval record"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit payment",
+          "checklist": [
+            "Submit payment instruction",
+            "Confirm payment executed",
+            "Store bank confirmation",
+            "Store tax authority receipt, if available",
+            "Notify filing owner that payment has been made"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Reconcile payment and monitor allocation",
+          "checklist": [
+            "Reconcile payment to return",
+            "Reconcile payment to calculation",
+            "Reconcile payment to bank statement",
+            "Reconcile payment to general ledger",
+            "Track tax authority allocation",
+            "Track overpayment, refund, offset, underpayment, interest or penalty"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive payment evidence pack",
+          "checklist": [
+            "Confirm payment calculation is stored",
+            "Confirm approvals are stored",
+            "Confirm bank confirmation is stored",
+            "Confirm tax authority receipt is stored",
+            "Confirm reconciliation is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Payment obligation memo",
+            "Legal source extract or local adviser confirmation",
+            "Payment deadline support",
+            "Payment type classification support",
+            "Payment due-date formula support",
+            "Return deadline versus payment deadline comparison"
+          ]
+        },
+        {
+          "group": "Liable entity, paying entity and payment route",
+          "items": [
+            "Liable entity confirmation",
+            "Paying entity confirmation",
+            "Payment process confirmation",
+            "Local bank account requirement support",
+            "Tax agent payment support, where relevant",
+            "Registration dependency support, where relevant"
+          ]
+        },
+        {
+          "group": "Payment amount and funding",
+          "items": [
+            "Payment calculation support",
+            "Payment amount version control record",
+            "Currency and FX support",
+            "Funding requirement support",
+            "Treasury lead-time confirmation",
+            "Withholding, bank charge or payment restriction analysis, where relevant"
+          ]
+        },
+        {
+          "group": "Payment validation",
+          "items": [
+            "Payment instruction",
+            "Bank details verification",
+            "Tax authority payment reference",
+            "Beneficiary confirmation",
+            "Value date confirmation",
+            "Duplicate payment check",
+            "Interest / penalty calculation"
+          ]
+        },
+        {
+          "group": "Approval",
+          "items": [
+            "Tax approval",
+            "Treasury / finance approval",
+            "Approval record showing amount, currency, entity, beneficiary and value date",
+            "Escalation approval, where relevant"
+          ]
+        },
+        {
+          "group": "Payment execution",
+          "items": [
+            "Bank confirmation",
+            "Tax authority receipt",
+            "Payment execution timestamp",
+            "Payment notification to filing owner",
+            "Failed payment / resubmission evidence, where relevant"
+          ]
+        },
+        {
+          "group": "Reconciliation and post-payment monitoring",
+          "items": [
+            "Return-to-payment reconciliation",
+            "Calculation-to-payment reconciliation",
+            "Bank statement reconciliation",
+            "GL posting support",
+            "Tax authority allocation confirmation",
+            "Overpayment / underpayment analysis",
+            "Refund / offset support, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if payment deadline is before filing deadline",
+        "Alert if payment cannot be made until registration is complete",
+        "Alert if bank details have not been independently verified",
+        "Alert if payment currency differs from calculation currency",
+        "Alert if payment amount source is not the final approved calculation"
+      ]
+    },
+    {
+      "obligation_type": "Safe harbour assessment",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm safe harbour assessment requirement and available safe harbours",
+          "checklist": [
+            "Confirm whether safe harbour assessment is required",
+            "Identify safe harbour type",
+            "Confirm domestic-law adoption or administrative acceptance",
+            "Confirm whether safe harbour is available for the fiscal year",
+            "Confirm whether safe harbour is relevant for GIR, QDMTT, IIR, UTPR, provision, or payment",
+            "Record assessment status"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm tested jurisdiction and entity population",
+          "checklist": [
+            "Confirm tested jurisdiction population",
+            "Confirm constituent entities included",
+            "Confirm PEs included",
+            "Confirm JVs included",
+            "Confirm investment entities included",
+            "Confirm minority-owned entities included",
+            "Confirm stateless entities included",
+            "Confirm excluded entities",
+            "Reconcile population to GIR and group structure"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect safe harbour source data",
+          "checklist": [
+            "Confirm CbCR data source",
+            "Confirm whether CbCR is qualifying",
+            "Confirm qualified financial statement source",
+            "Collect revenue data",
+            "Collect profit / loss before tax data",
+            "Collect covered tax data",
+            "Collect substance-based income exclusion data",
+            "Collect QDMTT data, if relevant",
+            "Track data gaps"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Assess data qualification and run safe harbour tests",
+          "checklist": [
+            "Run de minimis test, if applicable",
+            "Run simplified ETR test, if applicable",
+            "Run routine profits test, if applicable",
+            "Run QDMTT safe harbour assessment, if applicable",
+            "Run other local or simplified safe harbour tests, if relevant",
+            "Document passed tests",
+            "Document failed tests",
+            "Confirm continuity or re-entry restrictions, where relevant"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Document safe harbour conclusion and limitations",
+          "checklist": [
+            "Document whether safe harbour can be relied on",
+            "Document whether safe harbour is used for local filing",
+            "Document whether safe harbour is used for GIR reporting",
+            "Document whether safe harbour is used for provision",
+            "Document whether safe harbour affects payment",
+            "Document limitations and unresolved assumptions",
+            "Cross-reference to safe harbour claim / disclosure workflow"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve safe harbour assessment",
+          "checklist": [
+            "Complete technical review",
+            "Resolve reviewer comments",
+            "Obtain approval before reliance",
+            "Lock safe harbour conclusion",
+            "Notify affected filing workflows"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive safe harbour assessment evidence pack",
+          "checklist": [
+            "Confirm all test workpapers are stored",
+            "Confirm conclusion memo is stored",
+            "Confirm reviewer approval is stored",
+            "Confirm cross-references to filings are stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Safe harbour assessment requirement memo",
+            "Safe harbour type selection memo",
+            "Local adoption / domestic-law support",
+            "Administrative acceptance support, where relevant",
+            "Fiscal year availability support",
+            "Filing / provision / payment relevance analysis"
+          ]
+        },
+        {
+          "group": "Tested jurisdiction and entity population",
+          "items": [
+            "Tested jurisdiction population",
+            "Entity inclusion / exclusion analysis",
+            "PE inclusion analysis",
+            "JV inclusion analysis",
+            "Investment entity analysis",
+            "Minority-owned entity analysis",
+            "Stateless entity analysis, where relevant",
+            "GIR and group structure reconciliation"
+          ]
+        },
+        {
+          "group": "Data sources and qualification",
+          "items": [
+            "CbCR data source confirmation",
+            "Qualifying CbCR assessment",
+            "Qualified financial statements support",
+            "Data source owner matrix",
+            "Data limitation log",
+            "Source data version control record"
+          ]
+        },
+        {
+          "group": "Test inputs",
+          "items": [
+            "Revenue support",
+            "Profit / loss before tax support",
+            "Covered tax support",
+            "Substance-based income exclusion support",
+            "QDMTT data support, where relevant",
+            "Other safe harbour input support, where relevant"
+          ]
+        },
+        {
+          "group": "Safe harbour test workpapers",
+          "items": [
+            "De minimis test workpaper",
+            "Simplified ETR test workpaper",
+            "Routine profits test workpaper",
+            "QDMTT safe harbour workpaper",
+            "Other safe harbour workpaper",
+            "Failed-test log",
+            "Continuity / re-entry analysis"
+          ]
+        },
+        {
+          "group": "Technical conclusion",
+          "items": [
+            "Safe harbour conclusion memo",
+            "Reliance position support",
+            "Local filing impact analysis",
+            "GIR reporting impact analysis",
+            "Provision impact analysis",
+            "Payment impact analysis",
+            "Limitation and unresolved assumption log"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Approved conclusion version control record",
+            "Notification to affected filing workflows"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if CbCR is not confirmed as qualifying",
+        "Alert if financial statements are not confirmed as qualified",
+        "Alert if safe harbour is being relied on before approval",
+        "Alert if safe harbour position differs between GIR and local return",
+        "Add local checklist item if domestic law modifies safe harbour availability"
+      ]
+    },
+    {
+      "obligation_type": "Safe harbour claim / disclosure",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm safe harbour claim or disclosure requirement",
+          "checklist": [
+            "Confirm whether safe harbour is being claimed, disclosed, or merely assessed",
+            "Confirm legal or filing source for disclosure",
+            "Confirm deadline",
+            "Confirm whether disclosure is mandatory or optional",
+            "Confirm whether local election is required",
+            "Record obligation status"
+          ]
+        },
+        {
+          "phase": "Filing entity and filing route",
+          "title": "Confirm filing location and disclosure route",
+          "checklist": [
+            "Confirm disclosure location: GIR, QDMTT return, IIR return, UTPR return, combined return, notification, or local report",
+            "Confirm required fields",
+            "Confirm submission method",
+            "Confirm signatory or approval requirement",
+            "Confirm whether disclosure affects payment or calculation requirement"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm claim scope",
+          "checklist": [
+            "Confirm whether claim is jurisdiction-by-jurisdiction",
+            "Confirm whether claim is entity-by-entity",
+            "Confirm tested period",
+            "Confirm safe harbour type",
+            "Confirm covered entities",
+            "Confirm whether claim scope matches approved assessment"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Validate claim against approved assessment",
+          "checklist": [
+            "Confirm approved safe harbour assessment exists",
+            "Cross-check disclosure against assessment memo",
+            "Cross-check disclosure against calculation summary",
+            "Cross-check disclosure against GIR / local return data",
+            "Confirm failed tests are not claimed",
+            "Confirm restrictions or limitations are reflected"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare safe harbour disclosure",
+          "checklist": [
+            "Prepare disclosure",
+            "Complete return fields or schedule",
+            "Attach required support, if required",
+            "Prepare filing cross-reference",
+            "Version-control disclosure"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve safe harbour disclosure",
+          "checklist": [
+            "Complete technical review",
+            "Resolve comments",
+            "Obtain approval",
+            "Lock final disclosure"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit safe harbour disclosure",
+          "checklist": [
+            "Submit disclosure as part of relevant filing",
+            "Store filed disclosure copy",
+            "Store submission receipt",
+            "Link disclosure to relevant filing workflow"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor challenge or support request",
+          "checklist": [
+            "Monitor tax authority challenge",
+            "Monitor rejection",
+            "Monitor request for supporting evidence",
+            "Link to enquiry workflow if required",
+            "Link to amendment workflow if claim is corrected"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive safe harbour claim evidence pack",
+          "checklist": [
+            "Confirm claim support is stored",
+            "Confirm filed disclosure is stored",
+            "Confirm approval is stored",
+            "Confirm receipt is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Applicability and legal basis",
+          "items": [
+            "Safe harbour claim / disclosure memo",
+            "Disclosure requirement source",
+            "Deadline support",
+            "Mandatory / optional disclosure analysis",
+            "Local election support"
+          ]
+        },
+        {
+          "group": "Filing location and disclosure route",
+          "items": [
+            "Relevant return section / GIR field mapping",
+            "Disclosure location support: GIR, QDMTT, IIR, UTPR, combined return, notification or local report",
+            "Submission method support",
+            "Signatory or approval requirement support",
+            "Payment / calculation impact support, where relevant"
+          ]
+        },
+        {
+          "group": "Claim scope",
+          "items": [
+            "Approved safe harbour assessment memo",
+            "Jurisdiction-by-jurisdiction claim support",
+            "Entity-by-entity claim support, where relevant",
+            "Tested period support",
+            "Covered entity list",
+            "Claim scope to assessment reconciliation"
+          ]
+        },
+        {
+          "group": "Claim validation",
+          "items": [
+            "Safe harbour calculation summary",
+            "GIR / local return cross-reference",
+            "Failed-test exclusion check",
+            "Restriction / limitation check",
+            "Consistency check against approved assessment"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final disclosure version control record"
+          ]
+        },
+        {
+          "group": "Filing and post-filing",
+          "items": [
+            "Filed disclosure copy",
+            "Filing receipt",
+            "Submission timestamp evidence",
+            "Tax authority query / challenge log",
+            "Correction / amendment support, where relevant"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if claim is being made without approved assessment",
+        "Alert if disclosure field conflicts with safe harbour conclusion",
+        "Alert if local election is required to claim safe harbour",
+        "Alert if safe harbour affects payment or return requirement"
+      ]
+    },
+    {
+      "obligation_type": "Elections register",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Identify available elections and legal requirements",
+          "checklist": [
+            "Identify available Pillar 2 elections for the jurisdiction and fiscal year",
+            "Confirm legal source",
+            "Confirm whether election is annual, multi-year, irrevocable, revocable, or subject to lock-in",
+            "Confirm election deadline",
+            "Confirm whether election is made in GIR, local return, notification, or separate form",
+            "Record election status"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm affected entities, jurisdictions and periods",
+          "checklist": [
+            "Confirm affected entities",
+            "Confirm affected jurisdictions",
+            "Confirm affected fiscal years",
+            "Confirm whether election applies at group, jurisdiction or entity level",
+            "Confirm whether election affects future years",
+            "Confirm whether election interacts with safe harbours or QDMTT"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Assess financial, tax and compliance impact",
+          "checklist": [
+            "Assess financial impact",
+            "Assess tax calculation impact",
+            "Assess compliance impact",
+            "Assess provision impact",
+            "Assess payment impact",
+            "Assess filing disclosure impact",
+            "Document risks and limitations"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Prepare recommendation and obtain election approval",
+          "checklist": [
+            "Identify election owner",
+            "Identify decision-maker",
+            "Prepare election recommendation",
+            "Complete technical review",
+            "Obtain board, tax officer or authorised signatory approval, if required",
+            "Lock approved election decision"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Record election and prepare filing disclosure",
+          "checklist": [
+            "Record election in central register",
+            "Prepare disclosure for GIR or local return",
+            "Prepare separate election form, if required",
+            "Cross-reference affected filings",
+            "Update future-year tracker"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit election or disclose in filing",
+          "checklist": [
+            "Submit election, if separate filing is required",
+            "Include election in relevant return or GIR",
+            "Store submitted election or filed disclosure",
+            "Store submission receipt"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Track lock-in, expiry, renewal or revocation",
+          "checklist": [
+            "Track lock-in period",
+            "Track renewal date",
+            "Track expiry date",
+            "Track revocation restrictions",
+            "Roll forward election status to future years",
+            "Alert affected workflows"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive election evidence pack",
+          "checklist": [
+            "Confirm legal source is stored",
+            "Confirm impact analysis is stored",
+            "Confirm approval is stored",
+            "Confirm filed disclosure is stored",
+            "Confirm register extract is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Election availability and legal basis",
+          "items": [
+            "Election availability matrix",
+            "Legal source extract or local adviser confirmation",
+            "Election deadline support",
+            "Annual / multi-year / irrevocable / revocable classification",
+            "Lock-in period support",
+            "Election filing route support"
+          ]
+        },
+        {
+          "group": "Affected entities, jurisdictions and periods",
+          "items": [
+            "Affected entity / jurisdiction list",
+            "Affected fiscal year list",
+            "Group-level / jurisdiction-level / entity-level election analysis",
+            "Future-year impact support",
+            "Safe harbour or QDMTT interaction support"
+          ]
+        },
+        {
+          "group": "Impact analysis",
+          "items": [
+            "Election impact analysis",
+            "Financial impact support",
+            "Tax calculation impact support",
+            "Compliance impact support",
+            "Provision impact support",
+            "Payment impact support",
+            "Filing disclosure impact support",
+            "Risk and limitation memo"
+          ]
+        },
+        {
+          "group": "Recommendation and approval",
+          "items": [
+            "Election recommendation memo",
+            "Decision-maker confirmation",
+            "Approval record",
+            "Board / tax officer / authorised signatory approval, where relevant",
+            "Review comment log",
+            "Approved election decision record"
+          ]
+        },
+        {
+          "group": "Filing disclosure and register",
+          "items": [
+            "Filed election or disclosure",
+            "Central elections register extract",
+            "Relevant GIR / local return cross-reference",
+            "Separate election form, where relevant",
+            "Submission receipt, where relevant"
+          ]
+        },
+        {
+          "group": "Future-year monitoring",
+          "items": [
+            "Lock-in / renewal / expiry tracker",
+            "Revocation restriction support",
+            "Future-year roll-forward record",
+            "Affected workflow notification evidence"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if election deadline is earlier than return deadline",
+        "Alert if election is irrevocable or has lock-in period",
+        "Alert if election affects more than one jurisdiction",
+        "Alert if election affects safe harbour or QDMTT position",
+        "Add local checklist item if election requires separate filing"
+      ]
+    },
+    {
+      "obligation_type": "Amendment / correction / status-message remediation",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Assess amendment trigger and legal correction requirement",
+          "checklist": [
+            "Identify trigger: internal error, tax authority rejection, GIR status message, portal validation error, amended source data, adviser correction, assessment, or restructuring update",
+            "Confirm affected obligation type",
+            "Confirm legal source for amendment or correction",
+            "Confirm amendment deadline",
+            "Confirm whether amendment is required, optional, or not required",
+            "Record remediation status"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm affected entities, jurisdictions, periods and filings",
+          "checklist": [
+            "Confirm affected jurisdiction",
+            "Confirm affected fiscal period",
+            "Confirm affected entity or entities",
+            "Confirm affected return, report, notification, payment, registration or disclosure",
+            "Confirm whether other jurisdictions are affected",
+            "Confirm whether group model requires update"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Assess error type and tax impact",
+          "checklist": [
+            "Classify issue as data, calculation, entity scope, filing route, XML / portal format, payment, or technical interpretation",
+            "Assess tax impact",
+            "Assess interest impact",
+            "Assess penalty impact",
+            "Assess safe harbour impact",
+            "Assess disclosure impact",
+            "Assess payment impact",
+            "Document materiality and risk"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare correction plan and amended filing",
+          "checklist": [
+            "Prepare correction plan",
+            "Update data pack",
+            "Update calculation",
+            "Update return, XML, notification, disclosure, or payment instruction",
+            "Prepare explanation of amendment",
+            "Version-control original and amended files",
+            "Link to affected workflow"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve amended position",
+          "checklist": [
+            "Complete technical review",
+            "Obtain local adviser review, where required",
+            "Resolve comments",
+            "Obtain approval",
+            "Lock amended filing version"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit amendment and process related payment or refund",
+          "checklist": [
+            "Submit amendment or correction",
+            "Store amended filing",
+            "Store submission receipt",
+            "Submit additional payment, if required",
+            "Submit refund or offset request, if required",
+            "Link to payment workflow, if required"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Monitor acceptance and update root-cause log",
+          "checklist": [
+            "Monitor amendment acceptance",
+            "Monitor further challenge",
+            "Update root-cause log",
+            "Identify process control improvement",
+            "Update affected future workflows",
+            "Update risk register"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive amendment evidence pack",
+          "checklist": [
+            "Confirm original filing is stored",
+            "Confirm amended filing is stored",
+            "Confirm error analysis is stored",
+            "Confirm approval is stored",
+            "Confirm receipt is stored",
+            "Confirm root-cause note is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Trigger and legal basis",
+          "items": [
+            "Error / amendment trigger log",
+            "Status message / rejection notice / tax authority communication",
+            "Amendment legal source",
+            "Amendment deadline support",
+            "Required / optional / not required amendment conclusion",
+            "Remediation status record"
+          ]
+        },
+        {
+          "group": "Original filing and affected scope",
+          "items": [
+            "Original filed return / notification / GIR",
+            "Original filing receipt",
+            "Affected jurisdiction support",
+            "Affected entity support",
+            "Affected period support",
+            "Affected filing / payment / disclosure support",
+            "Cross-jurisdiction impact assessment, where relevant"
+          ]
+        },
+        {
+          "group": "Error and impact assessment",
+          "items": [
+            "Error impact assessment",
+            "Tax / interest / penalty impact calculation",
+            "Safe harbour impact analysis",
+            "Disclosure impact analysis",
+            "Payment impact analysis",
+            "Materiality and risk assessment"
+          ]
+        },
+        {
+          "group": "Correction plan and amended data",
+          "items": [
+            "Correction plan",
+            "Updated data pack",
+            "Updated calculation support",
+            "Updated return / XML / notification support",
+            "Explanation of amendment",
+            "Original-to-amended comparison",
+            "Version control record"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Local adviser review, where relevant",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final amended version approval"
+          ]
+        },
+        {
+          "group": "Submission, payment and post-submission",
+          "items": [
+            "Amended return / XML / notification",
+            "Amended filing receipt",
+            "Additional payment or refund support",
+            "Payment evidence link, where relevant",
+            "Amendment acceptance evidence",
+            "Further challenge log, where relevant"
+          ]
+        },
+        {
+          "group": "Root cause and control remediation",
+          "items": [
+            "Root-cause analysis",
+            "Control remediation note",
+            "Future workflow update evidence",
+            "Risk register update",
+            "Lessons learned note"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if amendment deadline is imminent",
+        "Alert if amendment affects multiple filings or jurisdictions",
+        "Alert if additional payment may be due",
+        "Alert if safe harbour claim may be invalidated",
+        "Alert if root cause suggests systemic data issue"
+      ]
+    },
+    {
+      "obligation_type": "Tax authority enquiry / audit defence",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Log enquiry and confirm response deadline",
+          "checklist": [
+            "Record enquiry receipt date",
+            "Record jurisdiction",
+            "Record period",
+            "Record entity",
+            "Record response deadline",
+            "Classify enquiry type: GIR, QDMTT, IIR, UTPR, safe harbour, payment, registration, entity scope, or general Pillar 2",
+            "Assign enquiry owner, reviewer, approver and local adviser",
+            "Confirm legal basis for request"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm enquiry scope",
+          "checklist": [
+            "Confirm information requested",
+            "Confirm affected filing",
+            "Confirm affected entities",
+            "Confirm affected jurisdictions",
+            "Confirm affected tax periods",
+            "Confirm whether request is formal or informal",
+            "Confirm whether extension is needed"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect filed positions and supporting evidence",
+          "checklist": [
+            "Identify relevant filed returns",
+            "Identify relevant notifications",
+            "Identify relevant payment evidence",
+            "Identify relevant safe harbour evidence",
+            "Identify relevant calculation files",
+            "Identify relevant legal source memos",
+            "Identify confidential, privileged or sensitive information",
+            "Collect supporting evidence"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Analyse enquiry and reconcile response data",
+          "checklist": [
+            "Prepare response plan",
+            "Reconcile requested data to filed position",
+            "Reconcile requested data to evidence pack",
+            "Identify gaps or inconsistencies",
+            "Assess whether prior filing error exists",
+            "Assess whether amendment workflow is required",
+            "Assess risk and escalation requirement"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare tax authority response",
+          "checklist": [
+            "Prepare draft response",
+            "Attach supporting evidence",
+            "Redact privileged or sensitive information, if required",
+            "Prepare technical explanation",
+            "Prepare response summary for approver",
+            "Version-control response"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Complete technical, legal and final review",
+          "checklist": [
+            "Complete technical review",
+            "Complete local adviser review",
+            "Complete legal / privilege review, if required",
+            "Resolve comments",
+            "Obtain final approval",
+            "Lock final response"
+          ]
+        },
+        {
+          "phase": "Submission / payment",
+          "title": "Submit response",
+          "checklist": [
+            "Submit response",
+            "Store submitted response",
+            "Store submission receipt",
+            "Confirm response was submitted before deadline"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Track follow-up, assessment or closure",
+          "checklist": [
+            "Track follow-up questions",
+            "Track assessments",
+            "Track settlement discussions",
+            "Track closure notice",
+            "Update risk register",
+            "Update lessons learned",
+            "Link to amendment workflow if required"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive enquiry evidence pack",
+          "checklist": [
+            "Confirm enquiry notice is stored",
+            "Confirm response is stored",
+            "Confirm evidence support is stored",
+            "Confirm approvals are stored",
+            "Confirm follow-up correspondence is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Enquiry intake and legal basis",
+          "items": [
+            "Tax authority enquiry notice",
+            "Enquiry intake log",
+            "Response deadline support",
+            "Legal basis analysis",
+            "Formal / informal request classification",
+            "Extension request support, where relevant"
+          ]
+        },
+        {
+          "group": "Enquiry scope",
+          "items": [
+            "Affected entity support",
+            "Affected jurisdiction support",
+            "Affected period support",
+            "Affected filing / return / payment support",
+            "Enquiry type classification",
+            "Scope confirmation with tax authority, where relevant"
+          ]
+        },
+        {
+          "group": "Filed positions and supporting evidence",
+          "items": [
+            "Filed return / notification / payment copies",
+            "Relevant evidence pack extracts",
+            "Relevant calculation files",
+            "Relevant safe harbour evidence",
+            "Relevant legal source memos",
+            "Relevant approval records"
+          ]
+        },
+        {
+          "group": "Analysis and reconciliation",
+          "items": [
+            "Data reconciliation to filed position",
+            "Response data reconciliation",
+            "Gap or inconsistency analysis",
+            "Prior filing error assessment",
+            "Amendment workflow assessment",
+            "Risk assessment"
+          ]
+        },
+        {
+          "group": "Privilege, confidentiality and adviser input",
+          "items": [
+            "Privilege / confidentiality review note",
+            "Local adviser advice",
+            "Legal approval",
+            "Redaction support, where relevant",
+            "Sensitive information handling record"
+          ]
+        },
+        {
+          "group": "Response preparation and approval",
+          "items": [
+            "Draft response",
+            "Supporting evidence bundle",
+            "Reviewer approval",
+            "Final approver sign-off",
+            "Review comment log",
+            "Final response version control record"
+          ]
+        },
+        {
+          "group": "Submission and follow-up",
+          "items": [
+            "Submitted response",
+            "Submission receipt",
+            "Follow-up correspondence",
+            "Assessment / closure notice",
+            "Settlement or resolution support, where relevant"
+          ]
+        },
+        {
+          "group": "Lessons learned and archive",
+          "items": [
+            "Lessons learned note",
+            "Risk register update",
+            "Process improvement note",
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if response deadline is within internal escalation window",
+        "Alert if enquiry suggests filed position may be incorrect",
+        "Alert if privileged material may be involved",
+        "Alert if enquiry affects more than one jurisdiction",
+        "Alert if amendment workflow should be opened"
+      ]
+    },
+    {
+      "obligation_type": "Pillar 2 provision / financial statement support",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm provision requirement and reporting timetable",
+          "checklist": [
+            "Confirm whether Pillar 2 provision support is required",
+            "Confirm financial reporting standard",
+            "Confirm reporting deadline",
+            "Confirm group reporting timetable",
+            "Confirm whether numbers are actual, forecast, estimated, or final",
+            "Confirm materiality thresholds",
+            "Confirm review scope"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm entities and jurisdictions in provision scope",
+          "checklist": [
+            "Confirm entities included",
+            "Confirm jurisdictions included",
+            "Confirm QDMTT jurisdictions",
+            "Confirm IIR jurisdictions",
+            "Confirm UTPR jurisdictions",
+            "Confirm local top-up tax jurisdictions",
+            "Confirm safe harbour jurisdictions",
+            "Confirm excluded entities",
+            "Reconcile scope to group structure and compliance workflows"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect provision data and model inputs",
+          "checklist": [
+            "Collect consolidation data",
+            "Collect tax provision data",
+            "Collect CbCR data",
+            "Collect statutory accounts data",
+            "Collect management accounts data",
+            "Collect Pillar 2 engine outputs",
+            "Collect safe harbour assumptions",
+            "Collect uncertain position inputs",
+            "Track data limitations"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Prepare Pillar 2 provision calculation",
+          "checklist": [
+            "Prepare provision calculation",
+            "Model QDMTT amounts",
+            "Model IIR amounts",
+            "Model UTPR amounts",
+            "Model local top-up tax amounts",
+            "Include safe harbour assumptions",
+            "Include uncertain positions",
+            "Document assumptions and limitations"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Reconcile provision to Pillar 2 model and tax accounts",
+          "checklist": [
+            "Reconcile provision to Pillar 2 model",
+            "Reconcile provision to local computations",
+            "Reconcile provision to tax provision accounts",
+            "Reconcile provision to financial statement tax accounts",
+            "Identify true-up items",
+            "Identify differences from prior period",
+            "Document unresolved issues"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Prepare financial statement disclosure support",
+          "checklist": [
+            "Prepare disclosure support, if required",
+            "Summarise key assumptions",
+            "Summarise material jurisdictions",
+            "Summarise uncertain positions",
+            "Summarise safe harbour assumptions",
+            "Version-control disclosure support"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve provision pack",
+          "checklist": [
+            "Complete tax review",
+            "Complete finance review",
+            "Complete external auditor support, if relevant",
+            "Resolve comments",
+            "Obtain final approval",
+            "Lock final provision pack"
+          ]
+        },
+        {
+          "phase": "Post-filing monitoring",
+          "title": "Track true-ups and compliance roll-forward items",
+          "checklist": [
+            "Roll forward differences to compliance workflows",
+            "Track true-up items once final filings are prepared",
+            "Update QDMTT / IIR / UTPR workflows",
+            "Update payment workflows",
+            "Update risk register"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive provision evidence pack",
+          "checklist": [
+            "Confirm calculation pack is stored",
+            "Confirm reconciliations are stored",
+            "Confirm approvals are stored",
+            "Confirm disclosure support is stored",
+            "Confirm true-up tracker is stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Provision requirement and reporting basis",
+          "items": [
+            "Provision requirement memo",
+            "Reporting timetable",
+            "Financial reporting standard support",
+            "Materiality threshold support",
+            "Review scope support",
+            "Actual / forecast / estimated / final data basis support"
+          ]
+        },
+        {
+          "group": "Entity and jurisdiction scope",
+          "items": [
+            "Jurisdiction and entity scope list",
+            "QDMTT jurisdiction list",
+            "IIR jurisdiction list",
+            "UTPR jurisdiction list",
+            "Local top-up tax jurisdiction list",
+            "Safe harbour jurisdiction list",
+            "Excluded entity support",
+            "Compliance workflow scope reconciliation"
+          ]
+        },
+        {
+          "group": "Data sources and assumptions",
+          "items": [
+            "Data source matrix",
+            "Consolidation data support",
+            "Tax provision data support",
+            "CbCR data support",
+            "Statutory accounts data support",
+            "Management accounts data support",
+            "Pillar 2 engine output support",
+            "Safe harbour assumption support",
+            "Uncertain position log",
+            "Data limitation log"
+          ]
+        },
+        {
+          "group": "Provision calculation",
+          "items": [
+            "Pillar 2 provision workbook",
+            "QDMTT modelling support",
+            "IIR modelling support",
+            "UTPR modelling support",
+            "Local top-up tax modelling support",
+            "Safe harbour modelling support",
+            "Calculation assumptions and limitation log"
+          ]
+        },
+        {
+          "group": "Reconciliations",
+          "items": [
+            "Reconciliation to Pillar 2 model",
+            "Reconciliation to local computations",
+            "Reconciliation to tax provision accounts",
+            "Reconciliation to financial statement tax accounts",
+            "Prior-period movement analysis",
+            "True-up item analysis"
+          ]
+        },
+        {
+          "group": "Financial statement disclosure",
+          "items": [
+            "Financial statement disclosure support",
+            "Key assumption summary",
+            "Material jurisdiction summary",
+            "Uncertain position summary",
+            "Safe harbour assumption summary",
+            "Disclosure version control record"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Finance approval",
+            "External auditor support, where relevant",
+            "Final provision pack",
+            "Review comment log",
+            "Final approval record"
+          ]
+        },
+        {
+          "group": "Compliance roll-forward",
+          "items": [
+            "Compliance true-up tracker",
+            "QDMTT workflow update evidence",
+            "IIR workflow update evidence",
+            "UTPR workflow update evidence",
+            "Payment workflow update evidence",
+            "Risk register update"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if provision is based on estimates rather than final data",
+        "Alert if safe harbour assumptions are not yet approved",
+        "Alert if provision differs materially from current compliance calculation",
+        "Alert if true-up item needs to be reflected in payment or return workflow"
+      ]
+    },
+    {
+      "obligation_type": "Entity change / acquisition / disposal / short-period review",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Identify entity change event and effective date",
+          "checklist": [
+            "Identify trigger event: acquisition, disposal, merger, liquidation, new PE, JV formation, ownership change, fiscal year change, short period, entity classification change, or restructuring",
+            "Confirm event date",
+            "Confirm effective date for tax purposes",
+            "Confirm effective date for accounting purposes",
+            "Confirm relevant legal documents",
+            "Record event status"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm affected entities, jurisdictions and ownership",
+          "checklist": [
+            "Confirm affected entities",
+            "Confirm affected jurisdictions",
+            "Confirm ownership before event",
+            "Confirm ownership after event",
+            "Confirm entity classification",
+            "Confirm PE, JV, investment entity or minority-owned entity status",
+            "Update legal entity structure chart"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Assess Pillar 2 scope and short-period impact",
+          "checklist": [
+            "Confirm whether group remains in scope",
+            "Confirm whether acquired or disposed group was previously in scope",
+            "Confirm impact on constituent entity classification",
+            "Confirm impact on GIR scope",
+            "Confirm whether short-period rules apply",
+            "Confirm whether fiscal year-end changes affect deadlines",
+            "Confirm whether historical data is available"
+          ]
+        },
+        {
+          "phase": "Reconciliation and technical analysis",
+          "title": "Assess impact on filings, payments, safe harbours and elections",
+          "checklist": [
+            "Assess impact on GIR filing",
+            "Assess impact on GIR notification",
+            "Assess impact on QDMTT",
+            "Assess impact on IIR",
+            "Assess impact on UTPR",
+            "Assess impact on local top-up tax",
+            "Assess impact on registration",
+            "Assess impact on payment obligations",
+            "Assess impact on safe harbour eligibility",
+            "Assess impact on elections",
+            "Assess impact on provision"
+          ]
+        },
+        {
+          "phase": "Data collection",
+          "title": "Collect new or revised entity data",
+          "checklist": [
+            "Collect legal entity data",
+            "Collect ownership data",
+            "Collect financial data",
+            "Collect tax data",
+            "Collect historical data for acquired entities",
+            "Collect local registration data",
+            "Identify missing data and integration issues"
+          ]
+        },
+        {
+          "phase": "Return / report preparation",
+          "title": "Update obligation inventory and affected workflows",
+          "checklist": [
+            "Update obligation inventory",
+            "Update entity master data",
+            "Update data request lists",
+            "Update GIR workflow",
+            "Update QDMTT / IIR / UTPR workflows",
+            "Update registration workflows",
+            "Update payment workflows",
+            "Update safe harbour workflows",
+            "Update elections register",
+            "Update due dates, where required"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve updated compliance position",
+          "checklist": [
+            "Complete technical review",
+            "Obtain local adviser review, where required",
+            "Resolve comments",
+            "Obtain approval of updated compliance position",
+            "Notify affected workflow owners"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive entity change evidence pack",
+          "checklist": [
+            "Confirm transaction documents are stored",
+            "Confirm updated structure chart is stored",
+            "Confirm impact memos are stored",
+            "Confirm updated obligation inventory is stored",
+            "Confirm approvals are stored",
+            "Confirm archive index is complete",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Trigger event and legal basis",
+          "items": [
+            "Entity change trigger memo",
+            "Transaction documents or legal entity change support",
+            "Effective date support",
+            "Tax effective date support",
+            "Accounting effective date support",
+            "Event status record"
+          ]
+        },
+        {
+          "group": "Ownership and entity classification",
+          "items": [
+            "Updated legal entity structure chart",
+            "Ownership analysis",
+            "Constituent entity classification analysis",
+            "PE / JV / investment entity / minority-owned entity classification support",
+            "Excluded entity analysis, where relevant",
+            "Legal entity master data update support"
+          ]
+        },
+        {
+          "group": "Pillar 2 scope and short-period impact",
+          "items": [
+            "Pillar 2 scope impact memo",
+            "Short-period analysis",
+            "Group in-scope analysis",
+            "Acquired / disposed group in-scope analysis",
+            "Fiscal year-end change analysis",
+            "Historical data availability analysis"
+          ]
+        },
+        {
+          "group": "Filing and reporting impact",
+          "items": [
+            "GIR scope update",
+            "QDMTT impact memo",
+            "IIR impact memo",
+            "UTPR impact memo",
+            "Local top-up tax impact memo",
+            "Notification / registration impact memo",
+            "Payment obligation impact memo",
+            "Provision impact memo"
+          ]
+        },
+        {
+          "group": "Safe harbour and elections impact",
+          "items": [
+            "Safe harbour impact memo",
+            "Elections impact memo",
+            "Existing election renewal / revocation support",
+            "Safe harbour continuity or re-entry support",
+            "Affected future-year workflow support"
+          ]
+        },
+        {
+          "group": "Data collection and workflow updates",
+          "items": [
+            "Updated obligation inventory",
+            "Updated data request list",
+            "New legal entity data support",
+            "New ownership data support",
+            "New financial data support",
+            "New tax data support",
+            "Registration data support, where relevant",
+            "Missing data / integration issue log"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Local adviser review, where relevant",
+            "Final approver sign-off",
+            "Review comment log",
+            "Approved updated compliance position"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if acquisition creates a new filing jurisdiction",
+        "Alert if disposal changes GIR scope",
+        "Alert if short-period rules affect deadlines",
+        "Alert if historical data for acquired entities is unavailable",
+        "Alert if safe harbour eligibility may be lost",
+        "Alert if existing elections need renewal, revocation or reassessment"
+      ]
+    },
+    {
+      "obligation_type": "Not applicable / non-filing position",
+      "parent_tasks": [
+        {
+          "phase": "Applicability and legal basis",
+          "title": "Confirm non-applicability position",
+          "checklist": [
+            "Confirm jurisdiction and fiscal year",
+            "Confirm obligation assessed",
+            "Review legal source",
+            "Confirm effective date",
+            "Confirm why obligation does not apply",
+            "Confirm whether monitoring is still required",
+            "Confirm whether related obligations still apply"
+          ]
+        },
+        {
+          "phase": "Entity and jurisdiction scoping",
+          "title": "Confirm entity and jurisdiction facts supporting non-filing",
+          "checklist": [
+            "Confirm relevant entities in jurisdiction",
+            "Confirm entity classification",
+            "Confirm group scope status",
+            "Confirm local activity status",
+            "Confirm whether there is a PE, JV, investment entity or excluded entity issue",
+            "Confirm no filing, payment, registration or notification obligation has been missed"
+          ]
+        },
+        {
+          "phase": "Review and approval",
+          "title": "Review and approve non-filing position",
+          "checklist": [
+            "Prepare non-filing memo",
+            "Complete technical review",
+            "Obtain local adviser review, where required",
+            "Resolve comments",
+            "Approve non-filing position",
+            "Mark workflow as “Not applicable — evidence stored”"
+          ]
+        },
+        {
+          "phase": "Evidence archive",
+          "title": "Archive non-filing evidence pack",
+          "checklist": [
+            "Store non-applicability memo",
+            "Store legal source support",
+            "Store entity scoping support",
+            "Store reviewer approval",
+            "Store related obligation check",
+            "Complete archive index",
+            "Close workflow"
+          ]
+        }
+      ],
+      "evidence_pack": [
+        {
+          "group": "Non-applicability legal basis",
+          "items": [
+            "Non-applicability memo",
+            "Legal source extract or local adviser confirmation",
+            "Effective date support",
+            "Non-filing reason support",
+            "Monitor-only conclusion, where relevant"
+          ]
+        },
+        {
+          "group": "Entity and jurisdiction facts",
+          "items": [
+            "Entity scoping support",
+            "Group scope status support",
+            "Entity classification support",
+            "Local activity status support",
+            "PE / JV / investment entity / excluded entity support, where relevant"
+          ]
+        },
+        {
+          "group": "Related obligation check",
+          "items": [
+            "Related obligation check",
+            "Filing obligation check",
+            "Payment obligation check",
+            "Notification obligation check",
+            "Registration obligation check",
+            "Safe harbour disclosure check, where relevant"
+          ]
+        },
+        {
+          "group": "Review and approval",
+          "items": [
+            "Reviewer approval",
+            "Local adviser review, where relevant",
+            "Final non-filing approval",
+            "Review comment log",
+            "“Not applicable — evidence stored” status confirmation"
+          ]
+        },
+        {
+          "group": "Archive index",
+          "items": [
+            "Evidence archive index",
+            "Final evidence pack completion confirmation",
+            "Evidence retention location"
+          ]
+        }
+      ],
+      "alerts_and_conditional_deviations": [
+        "Alert if legal source is not confirmed",
+        "Alert if obligation is “monitor only” rather than clearly not applicable",
+        "Alert if related notification, registration or payment obligation may still apply",
+        "Alert if local law has changed since last review"
+      ]
+    }
+  ]
+}
