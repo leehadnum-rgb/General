@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="GLOBEXML_V1.0.xsd" type="application/xml-xsd"?>
+<!--Globe tax return file for GIR levering basert på OECD standard 
+0. 
+    Alle GUID som er brukt i denne filen er konstruert og skal ikke brukes 
+    TIN nummer på alt er satt til Skatteetatens Organisasjonsnummer , dette bør byttes om man vil 
+    teste med faktiske data for å sjekke at det blir slått opp.
+
+    !OBS dersom man bare tar denne filen og ikke gjør noe med den vil den gi utslag på følgende regler :
+        - SKE002N   - Konsistend mellom innsender og Filling CE : fordi man er innlogget med annet orgnummer en definert i fillingCE: 974761076
+        - OECD70011 - Landkode for konsernenhet : fordi vi bruker samme orgnummer på alle CE enheter
+
+1. MessageSpec
+    - Denne delen inneholder informasjon om sendingen og sender
+2. FilingInfo
+    -   Denne delen inneholder informasjon om konsernet og regnskapsåret
+3. GeneralSection
+    -  Denne delen inneholder informasjon om konsernstrukturen og hvilke enheter som er med i rapporteringen
+    -   Denne delen inneholder også informasjon om hvilke jurisdiksjoner som er med i rapporteringen
+    -   Denne delen inneholder også informasjon om hvilken type data som sendes
+4. Summary
+    -   Denne delen inneholder oppsummering av informasjonen i rapporteringen
+    -   Denne delen inneholder også informasjon om hvilke jurisdiksjoner som er med i rapporteringen
+    -   Denne delen inneholder også informasjon om hvilken type data som sendes
+5. JurisdictionSection
+    -   Denne delen inneholder informasjon om hver enkelt jurisdiksjon som er med i rapporteringen
+    -   Denne delen inneholder også informasjon om hvilken type data som sendes
+6. GLoBETax
+    -   Denne delen inneholder informasjon om GLoBE tax return
+    -   Denne delen inneholder også informasjon om hvilken type data som sendes
+7. LowTaxJurisdiction
+    -   Denne delen inneholder informasjon om lavskatt jurisdiksjoner
+    -   Denne delen inneholder også informasjon om hvilken type data som sendes
+
+    
+
+-->
+<n1:GLOBE_OECD xmlns="urn:oecd:ties:globe:v2" xmlns:n1="urn:oecd:ties:globe:v2" xmlns:n2="urn:oecd:ties:globestf:v5" version="1">
+    <n1:MessageSpec>
+        <n1:SendingEntityIN>KJENT TREKANTET TIGER AS</n1:SendingEntityIN>        <!-- avsenders identifikasjonsnummer -->
+        <n1:TransmittingCountry>NO</n1:TransmittingCountry>        <!--avsenderland-->
+        <n1:ReceivingCountry>NO</n1:ReceivingCountry>        <!--mottakerland-->
+        <n1:MessageType>GIR</n1:MessageType>        <!--Meldingstype for GIR filer skal det alltid være GLOBE-->
+        <n1:Contact>"Contact information"</n1:Contact>        <!--Kontaktinformasjon -->
+        <n1:MessageRefId>NO2024NOPARITY003MSG21a47beb0a85401f8a51</n1:MessageRefId>        <!--meldingsreferanseidentifikator-->
+        <n1:MessageTypeIndic>GIR101</n1:MessageTypeIndic>        <!--meldingstypeindikator GIR101=nyinfo:GIR102=rettelse:GIR103=ingendata -->
+        <n1:ReportingPeriod>2024-12-31</n1:ReportingPeriod>        <!--siste dato i rapporteringsperiode -->
+        <n1:Timestamp>2026-05-27T12:00:00</n1:Timestamp>        <!--fil opprettet tid -->
+    </n1:MessageSpec>
+    <n1:GLOBEBody>
+        <n1:FilingInfo>
+            <n1:FilingCE>                <!-- rapporterende konsernenhet -->
+                <n1:ResCountryCode>NO</n1:ResCountryCode>                <!--hjemmehørende landkode-->                <!--hjemmehørende landkode-->
+                <n1:Name>Testkonsern ASA</n1:Name>                <!--virksomhetsnavn-->                <!--virksomhetsnavn-->
+                <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                <!--identifikator for finansinstitusjon-->                <!--identifikator for finansinstitusjon-->
+                <n1:Role>GIR401</n1:Role>                <!--rolle 403-konstituert/402-local/401-designert -->
+            </n1:FilingCE>
+            <n1:AccountingInfo>
+                <n1:CFSofUPE>GIR501</n1:CFSofUPE>                <!--Renskapsinfo subparagraph a,b,c,d av Article 10 for UPE , ultimate parrent entity(konsernspiss)-->
+                <n1:FAS>FAS tekst</n1:FAS>                <!--autorisert regnskapsspråk-->
+                <Currency>USD</Currency>                <!-- Valuta -->
+            </n1:AccountingInfo>
+            <n1:Period>
+                <n1:Start>2024-01-01</n1:Start>                <!-- regnskapsår start-->
+                <n1:End>2024-12-31</n1:End>                <!-- regnskapsår slutt-->
+            </n1:Period>
+            <n1:NameMNE>Testkonsern</n1:NameMNE>            <!-- multinational enterprise group name-->
+            <n1:DocSpec>
+                <n2:DocTypeIndic>OECD1</n2:DocTypeIndic>                <!--hvilken type data dette er ny/rettet/slettet/test satt som nyTESTdata i denne-->
+                <n2:DocRefId>NO2024TPARITY003DOC01e8a3c627481f40c992</n2:DocRefId>                <!--refid som sender har gitt for denne biten av dokumentet FilingInfo-->
+            </n1:DocSpec>
+        </n1:FilingInfo>
+        <n1:GeneralSection>
+            <RecJurCode>NO</RecJurCode>            <!-- landkode for mottakerjurisdiksjon-->
+            <RecJurCode>BE</RecJurCode>            <!-- landkode for mottakerjurisdiksjon-->
+            <RecJurCode>SE</RecJurCode>            <!-- landkode for mottakerjurisdiksjon-->
+            <RecJurCode>DE</RecJurCode>            <!-- landkode for mottakerjurisdiksjon-->
+            <RecJurCode>DK</RecJurCode>            <!-- landkode for mottakerjurisdiksjon-->
+            <n1:CorporateStructure>
+                <n1:UPE>                    <!-- øverste morselskap i et konsern -->
+                    <OtherUPE>
+                        <n1:ID>
+                            <n1:Name>Testkonsern ASA</n1:Name>                            <!--virksomhetsnavn-->
+                            <n1:ResCountryCode>NO</n1:ResCountryCode>                            <!--hjemmehørende landkode-->                            <!--hjemmehørende landkode-->
+                            <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                            <!--identifikator for finansinstitusjon-->
+                            <n1:Rules>GIR204</n1:Rules>                            <!--ID type  -->
+                            <GlobeStatus>GIR301</GlobeStatus>                            <!-- status for GloBE-formål-->
+                        </n1:ID>
+                    </OtherUPE>
+
+                </n1:UPE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>VRIEN BRA TIGER AS</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>NO</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000001</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR204</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!-- status for GloBE-formål-->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>FUNKSJONELL FALSK KATT BØRSTE</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>NO</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000002</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR204</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!-- status for GloBE-formål-->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>ELASTISK UMUSIKALSK TIGER AS</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>NO</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000003</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR204</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR306</n1:GlobeStatus>                        <!--Status Globe Purpose MainEntity -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR802</n1:OwnershipType>                        <!-- Eierskapstype : 802 CE -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000001</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Syrran AB</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>SE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000004</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Brorsan AB</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>SE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000005</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Berlin GmbH</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>DE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000006</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Bonn GmbH</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>DE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000007</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Antwerpen</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>BE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000008</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                    <n1:QUTPR>
+                        <n1:Art9.3>false
+                        </n1:Art9.3>                        <!--unntakt fra suppleringsskatt hvis i oppstartfasen-->
+                    </n1:QUTPR>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Liege</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>BE</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000009</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                    <n1:QUTPR>
+                        <n1:Art9.3>false
+                        </n1:Art9.3>                        <!--unntakt fra suppleringsskatt hvis i oppstartfasen-->
+                    </n1:QUTPR>
+                </n1:CE>
+                <n1:CE>                    <!--konsernenhet  -->
+                    <n1:ID>
+                        <n1:Name>Trøst AS Filial</n1:Name>                        <!--virksomhetsnavn-->
+                        <n1:ResCountryCode>DK</n1:ResCountryCode>                        <!--hjemmehørende landkode-->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000010</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:Rules>GIR201</n1:Rules>                        <!--ID type  -->
+                        <n1:GlobeStatus>GIR301</n1:GlobeStatus>                        <!--status for GloBE-formål -->
+                    </n1:ID>
+                    <n1:Ownership>                        <!-- eierskap -->
+                        <n1:OwnershipType>GIR801</n1:OwnershipType>                        <!-- Eierskapstype -->
+                        <n1:TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">974761076</n1:TIN>                        <!--identifikator for finansinstitusjon-->
+                        <n1:OwnershipPercentage>0.9999</n1:OwnershipPercentage>                        <!-- eierandeler-->
+                    </n1:Ownership>
+                </n1:CE>
+            </n1:CorporateStructure>
+            <n1:DocSpec>
+                <n2:DocTypeIndic>OECD1</n2:DocTypeIndic>
+                <n2:DocRefId>NO2024TPARITY003DOC0212afd7d452984f5799</n2:DocRefId>
+            </n1:DocSpec>
+        </n1:GeneralSection>
+        <Summary><RecJurCode>NO</RecJurCode><Jurisdiction><JurisdictionName>NO</JurisdictionName><Subgroup><TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000001</TIN><TypeofSubGroup>GIR1101</TypeofSubGroup></Subgroup><Subgroup><TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000002</TIN><TypeofSubGroup>GIR1102</TypeofSubGroup></Subgroup><Subgroup><TIN unknown="false" TypeOfTIN="GIR3001" issuedBy="NO">900000003</TIN><TypeofSubGroup>GIR1105</TypeofSubGroup></Subgroup></Jurisdiction><JurWithTaxingRights><JurisdictionName>NO</JurisdictionName></JurWithTaxingRights><SafeHarbour>GIR1202</SafeHarbour><ETRRange>GIR1303</ETRRange><SBIE><NotApplicable>false</NotApplicable><NoTut>false</NoTut></SBIE><QDMTTut>GIR1402</QDMTTut><GLoBETut>GIR1502</GLoBETut><DocSpec><n2:DocTypeIndic>OECD1</n2:DocTypeIndic><n2:DocRefId>NO2024TPARITY003DOC03136cb25b7deb44f99e</n2:DocRefId></DocSpec></Summary></n1:GLOBEBody>
+</n1:GLOBE_OECD>
