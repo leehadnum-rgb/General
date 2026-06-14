@@ -1,0 +1,3479 @@
+{
+  "_meta": {
+    "exportedAt": "2026-06-14T09:11:34.297Z",
+    "templateCount": 17,
+    "description": "Pillar 2 workflow templates — full V2 export for seeding"
+  },
+  "templates": [
+    {
+      "obligationType": "Registration",
+      "templateName": "Registration workflow",
+      "description": "Register the group or constituent entity for Pillar 2 compliance in the relevant jurisdiction.",
+      "titleKeywords": null,
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Review registration requirements",
+          "description": "Identify the local registration threshold, deadline, and required entities for Pillar 2 compliance.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Identify the registration threshold and due date",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm which entities need to register",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm registration form or portal availability",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Gather registration information",
+          "description": "Collect entity legal details, tax IDs, and contact information needed for the registration form.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Collect legal entity names and tax IDs",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare address and contact information",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm UPE or filing entity designation",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Submit registration",
+          "description": "Complete and submit the registration form to the relevant tax authority and obtain confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete online registration portal form",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Upload supporting documentation",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Obtain registration confirmation or reference number",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Registration confirmation / receipt",
+          "description": "Official confirmation or reference number from the tax authority confirming successful registration.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Completed registration form",
+          "description": "Copy of the submitted registration form or portal screenshot.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Entity list submitted",
+          "description": "List of constituent entities included in the registration.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "UPE / filing entity designation letter",
+          "description": "Letter or form confirming the designated filing entity, where required by the jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Power of attorney or agent authorisation",
+          "description": "Authorisation for an adviser or agent to register on behalf of the group, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Tax ID confirmation",
+          "description": "Official documentation confirming the entity tax identification number.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Internal approval of registration",
+          "description": "Internal sign-off or email trail confirming approval to register.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Adviser registration memo",
+          "description": "External adviser memo summarising registration requirements and approach, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Correspondence with tax authority",
+          "description": "Any correspondence with the tax authority regarding the registration process.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "Payment",
+      "templateName": "Payment workflow",
+      "description": "Calculate and remit the Pillar 2 top-up tax payment to the relevant tax authority.",
+      "titleKeywords": null,
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Calculate payment amount",
+          "description": "Determine the final payment amount by verifying the top-up tax liability from the filed return and applying any credits or offsets.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner",
+          "checklist": [
+            {
+              "text": "Verify top-up tax liability from filed return",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply credits, offsets, or instalments if applicable",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Confirm payment currency and exchange rate",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Reconcile payment amount to return schedules",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Initiate payment",
+          "description": "Arrange the bank transfer or payment instruction to the tax authority and confirm the payment has cleared.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Treasury",
+          "checklist": [
+            {
+              "text": "Complete bank transfer with tax reference",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm payment cleared and received",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "File payment confirmation with obligation record",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Payment confirmation / receipt",
+          "description": "Official receipt or confirmation from the tax authority that payment has been received.",
+          "category": "Payment proof",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Treasury"
+        },
+        {
+          "name": "Bank transfer receipt",
+          "description": "Bank statement or transfer confirmation showing the payment was made.",
+          "category": "Payment proof",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Treasury"
+        },
+        {
+          "name": "Payment calculation workbook",
+          "description": "Workbook or spreadsheet showing how the payment amount was derived from the return.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "FX rate documentation",
+          "description": "Evidence of the exchange rate used for currency conversion, where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Treasury"
+        },
+        {
+          "name": "Internal payment approval",
+          "description": "Internal sign-off or authorisation confirming approval of the payment amount.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Instalment schedule",
+          "description": "Schedule of instalment payments, if the jurisdiction allows or requires payment in instalments.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Credit or offset documentation",
+          "description": "Documentation supporting any credits, offsets, or prior-year adjustments applied to the payment.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Reconciliation to return",
+          "description": "Reconciliation showing the payment matches the liability on the filed return.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Tax authority correspondence",
+          "description": "Any correspondence with the tax authority regarding payment arrangements or queries.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Treasury memo",
+          "description": "Internal treasury memo documenting funding, currency, and timing decisions.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Treasury"
+        }
+      ]
+    },
+    {
+      "obligationType": "Return",
+      "templateName": "Generic return workflow",
+      "description": "Prepare and file a Pillar 2 tax return (generic template used when no specific return type template exists).",
+      "titleKeywords": null,
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm applicability",
+          "description": "Review the filing threshold, identify the filing entity, and confirm the obligation applies for this jurisdiction and year.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Review filing threshold and exemptions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm filing entity and jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify local legislation reference",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect financial data",
+          "description": "Extract the financial data needed for the return, including general ledger data, consolidation adjustments, and entity-level detail.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract general ledger data per entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather consolidation adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect entity ownership and structure data",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data completeness and quality",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Calculate ETR and top-up tax",
+          "description": "Apply GloBE income and covered tax adjustments to calculate the jurisdiction-level effective tax rate and determine any top-up tax liability.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Apply GloBE income adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply covered tax adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Calculate jurisdiction-level ETR",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Determine top-up tax liability",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply substance-based income exclusion",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare return",
+          "description": "Complete the return schedules, populate the filing form, and prepare supporting calculations.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete return schedules",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare supporting calculations workbook",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate return against schema or form requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior tax review of the return and calculations, with external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of return and calculations",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File return",
+          "description": "Submit the return via the tax portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via tax portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed return (PDF or XML)",
+          "description": "Copy of the submitted return in the format accepted by the tax authority.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt or confirmation from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "ETR calculation workbook",
+          "description": "Workbook showing the jurisdiction-level effective tax rate calculation, including GloBE income and covered tax adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Top-up tax calculation",
+          "description": "Workbook or schedule showing how the top-up tax liability was determined.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GloBE income adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to arrive at GloBE income.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Covered tax adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to covered taxes.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data (GL extracts, trial balances) used to prepare the return.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Substance-based income exclusion calculation",
+          "description": "Calculation of the substance-based income exclusion (payroll and tangible assets), where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo reviewing the return and key technical positions, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Reconciliation to financial statements",
+          "description": "Reconciliation of return data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Elections register extract",
+          "description": "Extract from the elections register showing elections relevant to this return, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Return preparation working papers",
+          "description": "Detailed working papers documenting the return preparation process.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this return.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "QDMTT_RETURN",
+      "templateName": "QDMTT return workflow",
+      "description": "Prepare and file the Qualified Domestic Minimum Top-up Tax return for the jurisdiction.",
+      "titleKeywords": "qdmtt",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm applicability",
+          "description": "Review the filing threshold, identify the filing entity, and confirm the obligation applies for this jurisdiction and year.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Review filing threshold and exemptions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm filing entity and jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify local legislation reference",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect financial data",
+          "description": "Extract the financial data needed for the return, including general ledger data, consolidation adjustments, and entity-level detail.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract general ledger data per entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather consolidation adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect entity ownership and structure data",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data completeness and quality",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Calculate QDMTT liability",
+          "description": "Calculate the QDMTT liability using the jurisdiction-specific QDMTT rules, including any local adjustments or safe harbour provisions.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Apply local QDMTT income adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply local QDMTT covered tax adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Calculate QDMTT ETR",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Determine QDMTT top-up amount",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply QDMTT safe harbour, where applicable",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Compare QDMTT to GloBE calculation for consistency",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare return",
+          "description": "Complete the return schedules, populate the filing form, and prepare supporting calculations.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete return schedules",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare supporting calculations workbook",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate return against schema or form requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior tax review of the return and calculations, with external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of return and calculations",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File return",
+          "description": "Submit the return via the tax portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via tax portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed QDMTT return (PDF or XML)",
+          "description": "Copy of the submitted QDMTT return in the format accepted by the tax authority.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt or confirmation from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "ETR calculation workbook",
+          "description": "Workbook showing the jurisdiction-level effective tax rate calculation, including GloBE income and covered tax adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Top-up tax calculation",
+          "description": "Workbook or schedule showing how the top-up tax liability was determined.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "QDMTT-specific calculation workbook",
+          "description": "Workbook showing the QDMTT-specific income and tax calculations, including any local adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "QDMTT vs GloBE reconciliation",
+          "description": "Reconciliation comparing the QDMTT calculation to the GloBE calculation to identify and explain differences.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "QDMTT safe harbour assessment",
+          "description": "Assessment of whether the QDMTT safe harbour applies and supporting calculations, where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GloBE income adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to arrive at GloBE income.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Covered tax adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to covered taxes.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data (GL extracts, trial balances) used to prepare the return.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Substance-based income exclusion calculation",
+          "description": "Calculation of the substance-based income exclusion (payroll and tangible assets), where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo reviewing the return and key technical positions, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Reconciliation to financial statements",
+          "description": "Reconciliation of return data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Elections register extract",
+          "description": "Extract from the elections register showing elections relevant to this return, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Return preparation working papers",
+          "description": "Detailed working papers documenting the return preparation process.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this return.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "IIR_RETURN",
+      "templateName": "IIR return workflow",
+      "description": "Prepare and file the Income Inclusion Rule return for the UPE or intermediate parent entity jurisdiction.",
+      "titleKeywords": "iir",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm applicability",
+          "description": "Review the filing threshold, identify the filing entity, and confirm the obligation applies for this jurisdiction and year.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Review filing threshold and exemptions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm filing entity and jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify local legislation reference",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect financial data",
+          "description": "Extract the financial data needed for the return, including general ledger data, consolidation adjustments, and entity-level detail.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract general ledger data per entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather consolidation adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect entity ownership and structure data",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data completeness and quality",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Calculate IIR top-up tax",
+          "description": "Calculate the IIR top-up tax by determining the allocable share of top-up tax for low-taxed constituent entities.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Identify low-taxed constituent entities",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Calculate allocable share of top-up tax",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply ownership chain and holding structure",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Net off QDMTT credits, where applicable",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare return",
+          "description": "Complete the return schedules, populate the filing form, and prepare supporting calculations.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete return schedules",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare supporting calculations workbook",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate return against schema or form requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior tax review of the return and calculations, with external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of return and calculations",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File return",
+          "description": "Submit the return via the tax portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via tax portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed IIR return (PDF or XML)",
+          "description": "Copy of the submitted IIR return in the format accepted by the tax authority.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt or confirmation from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "ETR calculation workbook",
+          "description": "Workbook showing the jurisdiction-level effective tax rate calculation, including GloBE income and covered tax adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Top-up tax calculation",
+          "description": "Workbook or schedule showing how the top-up tax liability was determined.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "IIR allocation schedule",
+          "description": "Schedule showing the allocation of top-up tax to the IIR-charging entity based on ownership chain.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Ownership chain analysis",
+          "description": "Analysis of the ownership chain used to determine the IIR allocation.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "QDMTT credit offset schedule",
+          "description": "Schedule showing QDMTT credits offset against IIR liability, where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GloBE income adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to arrive at GloBE income.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Covered tax adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to covered taxes.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data (GL extracts, trial balances) used to prepare the return.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Substance-based income exclusion calculation",
+          "description": "Calculation of the substance-based income exclusion (payroll and tangible assets), where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo reviewing the return and key technical positions, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Reconciliation to financial statements",
+          "description": "Reconciliation of return data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Elections register extract",
+          "description": "Extract from the elections register showing elections relevant to this return, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Return preparation working papers",
+          "description": "Detailed working papers documenting the return preparation process.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this return.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "UTPR_RETURN",
+      "templateName": "UTPR return workflow",
+      "description": "Prepare and file the Undertaxed Profits Rule return for the jurisdiction.",
+      "titleKeywords": "utpr",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm applicability",
+          "description": "Review the filing threshold, identify the filing entity, and confirm the obligation applies for this jurisdiction and year.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Review filing threshold and exemptions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm filing entity and jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify local legislation reference",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect financial data",
+          "description": "Extract the financial data needed for the return, including general ledger data, consolidation adjustments, and entity-level detail.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract general ledger data per entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather consolidation adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect entity ownership and structure data",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data completeness and quality",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Calculate UTPR top-up tax",
+          "description": "Calculate the UTPR top-up tax allocation based on the jurisdiction's share of employees and tangible assets.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Identify residual top-up tax after IIR",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Calculate UTPR allocation (employees and tangible assets)",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply UTPR percentage to determine jurisdiction allocation",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Net off QDMTT and IIR credits",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare return",
+          "description": "Complete the return schedules, populate the filing form, and prepare supporting calculations.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete return schedules",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare supporting calculations workbook",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate return against schema or form requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior tax review of the return and calculations, with external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of return and calculations",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File return",
+          "description": "Submit the return via the tax portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via tax portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed UTPR return (PDF or XML)",
+          "description": "Copy of the submitted UTPR return in the format accepted by the tax authority.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt or confirmation from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "ETR calculation workbook",
+          "description": "Workbook showing the jurisdiction-level effective tax rate calculation, including GloBE income and covered tax adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Top-up tax calculation",
+          "description": "Workbook or schedule showing how the top-up tax liability was determined.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "UTPR allocation schedule",
+          "description": "Schedule showing the UTPR allocation based on employees and tangible assets.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Employee and tangible asset data",
+          "description": "Data on employees and tangible assets used for the UTPR allocation.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "IIR / QDMTT credit offset schedule",
+          "description": "Schedule showing credits offset against the UTPR liability, where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GloBE income adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to arrive at GloBE income.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Covered tax adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to covered taxes.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data (GL extracts, trial balances) used to prepare the return.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Substance-based income exclusion calculation",
+          "description": "Calculation of the substance-based income exclusion (payroll and tangible assets), where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo reviewing the return and key technical positions, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Reconciliation to financial statements",
+          "description": "Reconciliation of return data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Elections register extract",
+          "description": "Extract from the elections register showing elections relevant to this return, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Return preparation working papers",
+          "description": "Detailed working papers documenting the return preparation process.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this return.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "COMBINED_LOCAL_TOP_UP_TAX_RETURN",
+      "templateName": "Combined local top-up tax return workflow",
+      "description": "Prepare and file a combined local top-up tax return covering multiple Pillar 2 charging mechanisms (e.g. QDMTT + IIR or QDMTT + UTPR) in a single filing.",
+      "titleKeywords": "combined",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm applicability",
+          "description": "Review the filing threshold, identify the filing entity, and confirm the obligation applies for this jurisdiction and year.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Review filing threshold and exemptions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm filing entity and jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify local legislation reference",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect financial data",
+          "description": "Extract the financial data needed for the return, including general ledger data, consolidation adjustments, and entity-level detail.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract general ledger data per entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather consolidation adjustments",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect entity ownership and structure data",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data completeness and quality",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Calculate combined top-up tax",
+          "description": "Calculate the combined top-up tax liability covering all applicable charging mechanisms in the jurisdiction.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Calculate QDMTT component",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Calculate IIR / UTPR component, if applicable",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Reconcile combined total",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply local adjustments and credits",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare return",
+          "description": "Complete the return schedules, populate the filing form, and prepare supporting calculations.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete return schedules",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare supporting calculations workbook",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate return against schema or form requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior tax review of the return and calculations, with external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of return and calculations",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File return",
+          "description": "Submit the return via the tax portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via tax portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed combined return (PDF or XML)",
+          "description": "Copy of the submitted combined return in the format accepted by the tax authority.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt or confirmation from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "ETR calculation workbook",
+          "description": "Workbook showing the jurisdiction-level effective tax rate calculation, including GloBE income and covered tax adjustments.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Top-up tax calculation",
+          "description": "Workbook or schedule showing how the top-up tax liability was determined.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Combined calculation workbook",
+          "description": "Workbook showing the combined calculation across all charging mechanisms.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Component reconciliation",
+          "description": "Reconciliation showing how each component (QDMTT, IIR, UTPR) contributes to the combined total.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local adjustment schedule",
+          "description": "Schedule of local adjustments and credits applied, where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GloBE income adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to arrive at GloBE income.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Covered tax adjustments schedule",
+          "description": "Schedule documenting the adjustments applied to covered taxes.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data (GL extracts, trial balances) used to prepare the return.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Substance-based income exclusion calculation",
+          "description": "Calculation of the substance-based income exclusion (payroll and tangible assets), where applicable.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo reviewing the return and key technical positions, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Reconciliation to financial statements",
+          "description": "Reconciliation of return data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Elections register extract",
+          "description": "Extract from the elections register showing elections relevant to this return, if applicable.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Return preparation working papers",
+          "description": "Detailed working papers documenting the return preparation process.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this return.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "CENTRAL_GIR_FILING",
+      "templateName": "Central GIR filing workflow",
+      "description": "Prepare and file the GloBE Information Return on behalf of the group via the central filing entity (UPE or designated filing entity).",
+      "titleKeywords": "gir filing central",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm central filing arrangement",
+          "description": "Verify the designated filing entity (UPE or DFE), confirm the list of constituent entities covered, and validate the central filing route.",
+          "phase": "Filing entity and filing route",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Verify designation of filing entity (UPE or DFE)",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm constituent entities covered by central filing",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm qualifying competent authority agreements in place",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect group-wide GIR data",
+          "description": "Gather entity-level financial data for all jurisdictions, including revenue, GloBE income, covered taxes, and employee headcount.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Gather entity list and jurisdictions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect revenue, income, tax and employee data per jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm data quality and completeness",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare GIR",
+          "description": "Complete the GIR XML or electronic return, including all required schedules, and validate against the OECD schema.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete GIR XML template or form",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate GIR file against OECD schema",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Cross-check data to local returns",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve GIR",
+          "description": "Senior tax review of the GIR content, including external adviser review where required.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior tax review of GIR content",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "File GIR centrally",
+          "description": "Submit the GIR to the central jurisdiction tax authority portal and obtain filing confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit GIR via central jurisdiction portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed GIR (XML or PDF)",
+          "description": "Copy of the submitted GloBE Information Return in XML or PDF format.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GIR filing receipt",
+          "description": "Official filing receipt or confirmation from the central jurisdiction tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Entity and jurisdiction data pack",
+          "description": "Workbook or data pack containing entity-level data used to populate the GIR.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "GIR validation report",
+          "description": "Schema validation output confirming the GIR file passes technical checks.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing entity designation confirmation",
+          "description": "Evidence confirming the UPE or DFE designation for central filing.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Competent authority agreement evidence",
+          "description": "Evidence that qualifying competent authority agreements are in place, where required.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior tax reviewer or authorised signatory.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "GIR data reconciliation",
+          "description": "Reconciliation of GIR data to source financial statements and local returns.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "External adviser review memo",
+          "description": "External adviser memo reviewing GIR content and filing approach, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Constituent entity list",
+          "description": "Complete list of constituent entities covered by the central filing.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "GIR preparation workbook",
+          "description": "Working papers and calculations used to prepare the GIR.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on source data before GIR preparation.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "Cross-jurisdiction consistency check",
+          "description": "Check that GIR data is consistent with local return filings across jurisdictions.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "GIR filing timeline tracker",
+          "description": "Internal tracker documenting key milestones and deadlines for the GIR filing process.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Any correspondence with the tax authority regarding the GIR filing.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "LOCAL_GIR_FILING",
+      "templateName": "Local GIR filing workflow",
+      "description": "File the GloBE Information Return locally in a constituent entity jurisdiction where central filing does not apply.",
+      "titleKeywords": "gir filing local",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm local GIR requirement",
+          "description": "Verify that the jurisdiction requires a local GIR filing and identify the filing entity and deadline.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Verify jurisdiction requires local GIR filing",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify filing entity in jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm local filing format and portal",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare local GIR",
+          "description": "Adapt the group-wide GIR data for the local jurisdiction format and complete the filing form.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Adapt group-wide GIR data for local format",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Complete local GIR form or XML",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate against local schema requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and file local GIR",
+          "description": "Review the local GIR for accuracy and submit via the local jurisdiction portal.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Senior review of local GIR content",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Submit via local jurisdiction portal",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Local GIR filed (XML or PDF)",
+          "description": "Copy of the filed local GIR in the jurisdiction-specific format.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local GIR filing receipt",
+          "description": "Official filing receipt from the local tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local GIR data workbook",
+          "description": "Working papers showing how group-wide data was adapted for the local filing.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local validation report",
+          "description": "Schema or format validation output for the local GIR file.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the reviewer confirming accuracy of the local GIR.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Consistency check to central GIR",
+          "description": "Reconciliation confirming local GIR data is consistent with the central GIR, where relevant.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on local filing requirements, if applicable.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Local filing entity confirmation",
+          "description": "Confirmation of the entity filing locally and its authority to do so.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local format mapping notes",
+          "description": "Notes documenting any differences between the OECD standard GIR format and the local format.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the local tax authority about the GIR filing.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing timeline tracker",
+          "description": "Internal tracker documenting milestones for the local GIR process.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks performed on local source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Data Provider"
+        }
+      ]
+    },
+    {
+      "obligationType": "GIR_NOTIFICATION",
+      "templateName": "GIR notification workflow",
+      "description": "Notify the local tax authority that the GloBE Information Return has been or will be filed centrally in another jurisdiction.",
+      "titleKeywords": "gir notification",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm notification requirement",
+          "description": "Verify the jurisdiction requires a GIR notification and identify the deadline and required content.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Verify jurisdiction requires GIR notification",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify notification deadline and form",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare notification",
+          "description": "Draft the notification letter or form confirming where the GIR has been filed centrally.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Draft notification confirming central filing jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Include details of filing entity and filing date",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain internal approval before submission",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Submit notification",
+          "description": "Submit the GIR notification via the local portal or by other prescribed means and obtain confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit notification via local portal or email",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain confirmation of receipt, where available",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Notification letter or form submitted",
+          "description": "Copy of the submitted notification letter or completed form.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Notification receipt",
+          "description": "Confirmation from the tax authority that the notification was received, where available.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Central filing confirmation reference",
+          "description": "Reference to the central GIR filing receipt confirming the GIR was filed.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Internal approval of notification",
+          "description": "Internal sign-off confirming the notification content and timing.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Filing entity designation evidence",
+          "description": "Evidence of the designated filing entity for the central GIR.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Notification deadline tracker",
+          "description": "Internal tracker documenting the notification deadline and submission date.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Adviser memo on notification requirements",
+          "description": "External adviser memo summarising notification requirements, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Any correspondence with the tax authority about the notification.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Notification process notes",
+          "description": "Internal notes documenting the notification process and any issues.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Historical notification log",
+          "description": "Log of previous GIR notifications for this jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "FOREIGN_LODGMENT_NOTIFICATION",
+      "templateName": "Foreign lodgment notification workflow",
+      "description": "Notify the domestic authority that a filing has been made in a foreign jurisdiction on behalf of the group.",
+      "titleKeywords": "foreign lodgment notification",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm foreign lodgment notification requirement",
+          "description": "Verify the jurisdiction requires notification of a foreign lodgment and identify the deadline.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Verify jurisdiction requires foreign lodgment notification",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify notification form and deadline",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare and submit foreign lodgment notification",
+          "description": "Draft and submit the notification confirming where the filing was made.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Draft notification confirming filing location and entity",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Submit via local portal or prescribed method",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain confirmation of receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Foreign lodgment notification submitted",
+          "description": "Copy of the submitted notification form or letter.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt or confirmation",
+          "description": "Receipt or confirmation from the tax authority, where available.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Foreign filing reference",
+          "description": "Reference to the foreign filing that triggered the notification.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Internal approval",
+          "description": "Internal sign-off confirming the notification content.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Notification deadline tracker",
+          "description": "Internal tracker documenting the notification deadline.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Adviser memo",
+          "description": "External adviser memo on foreign lodgment notification requirements, if applicable.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority about the notification.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Process notes",
+          "description": "Internal notes documenting the notification workflow.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "GIR_EXCHANGE_MONITORING",
+      "templateName": "GIR exchange monitoring workflow",
+      "description": "Monitor whether the centrally filed GIR has been exchanged to the local jurisdiction via the automatic exchange mechanism.",
+      "titleKeywords": "gir exchange monitoring",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Monitor GIR exchange status",
+          "description": "Track whether the GIR filed centrally has been exchanged to the local jurisdiction and escalate if not received within the expected timeframe.",
+          "phase": "Post-filing monitoring",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Check local jurisdiction portal for received GIR",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm GIR has been exchanged within expected timeframe",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Escalate if GIR not received within expected period",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Document exchange status and any actions taken",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Exchange status confirmation",
+          "description": "Evidence confirming whether the GIR has been exchanged to the local jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Portal screenshot or receipt",
+          "description": "Screenshot or receipt from the local portal showing the GIR exchange status.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Escalation record",
+          "description": "Record of any escalation actions taken if the GIR was not received.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Central filing receipt reference",
+          "description": "Reference to the central filing receipt confirming when the GIR was submitted.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Exchange timeline tracker",
+          "description": "Internal tracker documenting expected and actual exchange dates.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with local or central authorities regarding the exchange.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Monitoring process notes",
+          "description": "Internal notes documenting the monitoring process.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "FALLBACK_GIR_FILING_ASSESSMENT",
+      "templateName": "Fallback GIR filing assessment workflow",
+      "description": "Assess whether a fallback GIR filing is required in the local jurisdiction because the central GIR was not exchanged within the prescribed timeframe.",
+      "titleKeywords": "fallback gir filing assessment",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Assess fallback GIR filing risk",
+          "description": "Determine whether the centrally filed GIR has been exchanged, and assess whether the jurisdiction requires a fallback local filing.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Determine if GIR was filed centrally",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Check if GIR has been exchanged to local jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Review local legislation for fallback filing trigger",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Assess whether fallback filing is triggered",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare fallback GIR filing if required",
+          "description": "If fallback filing is triggered, prepare and submit a local GIR filing.",
+          "phase": "Return / report preparation",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Prepare local GIR filing as fallback",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Submit fallback filing via local portal",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Fallback filing assessment memo",
+          "description": "Memo documenting the assessment of whether fallback filing is required.",
+          "category": "Adviser memo",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Exchange status evidence",
+          "description": "Evidence showing whether the GIR was or was not exchanged.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local legislation reference",
+          "description": "Reference to the local legislation defining fallback filing triggers.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Fallback GIR filing (if required)",
+          "description": "Copy of the fallback GIR filing, if the assessment concluded it was required.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Fallback filing receipt",
+          "description": "Filing receipt for the fallback GIR, if filed.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Internal decision record",
+          "description": "Record of the internal decision on whether to file or not.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on fallback filing risk, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding fallback filing.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    },
+    {
+      "obligationType": "GIR_ROUTE_ASSESSMENT",
+      "templateName": "GIR route assessment workflow",
+      "description": "Assess the optimal GIR filing route for the group, considering central vs local filing options, eligible filing entities, and exchange agreements.",
+      "titleKeywords": "gir route assessment",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Assess GIR filing route options",
+          "description": "Evaluate the available filing routes (central UPE, DFE, local) and document the recommended approach.",
+          "phase": "Filing entity and filing route",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Identify eligible filing entities (UPE, DFE)",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Evaluate central vs local filing options",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Consider exchange agreements and notification requirements",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Document filing route decision and rationale",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "GIR filing route assessment memo",
+          "description": "Memo documenting the analysis of available filing routes and the recommended approach.",
+          "category": "Adviser memo",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Filing entity eligibility analysis",
+          "description": "Analysis of which entities are eligible to file centrally (UPE, DFE).",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Exchange agreement summary",
+          "description": "Summary of qualifying competent authority agreements relevant to the filing route.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Internal decision record",
+          "description": "Record of the internal decision on the chosen GIR filing route.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Notification obligation mapping",
+          "description": "Mapping of which jurisdictions require GIR notifications under the chosen route.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Jurisdiction-by-jurisdiction filing summary",
+          "description": "Table summarising the filing method (central, local, notification) for each jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on filing route options, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Board or CFO briefing note",
+          "description": "Briefing note for the board or CFO summarising the filing route decision.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Global Tax Lead"
+        }
+      ]
+    },
+    {
+      "obligationType": "SAFE_HARBOUR_ASSESSMENT",
+      "templateName": "Safe harbour assessment workflow",
+      "description": "Assess whether the group qualifies for one or more transitional or permanent safe harbour provisions and prepare supporting documentation.",
+      "titleKeywords": "safe harbour",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Identify applicable safe harbours",
+          "description": "Review the available safe harbour provisions (transitional CbCR, QDMTT, simplified calculations) and determine which may apply.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Identify transitional CbCR safe harbour eligibility",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify QDMTT safe harbour eligibility",
+              "detailLevel": "standard",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Review permanent safe harbour provisions, where applicable",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect safe harbour data",
+          "description": "Gather the financial data needed for the safe harbour tests, including CbCR data and simplified ETR calculations.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Extract CbCR data for relevant jurisdictions",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Prepare simplified ETR calculation inputs",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Collect revenue and profit data for de minimis test",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Apply safe harbour tests",
+          "description": "Run the safe harbour tests (de minimis, simplified ETR, routine profits) and document the results.",
+          "phase": "Reconciliation and technical analysis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Apply de minimis test",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply simplified ETR test",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Apply routine profits test",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Document pass/fail for each jurisdiction",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve safe harbour assessment",
+          "description": "Senior review of the safe harbour assessment results and sign-off.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior review of safe harbour results",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "External adviser review, where relevant",
+              "detailLevel": "detailed",
+              "requirementLevel": "conditional_required"
+            },
+            {
+              "text": "Approve safe harbour claims",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Safe harbour assessment summary",
+          "description": "Summary document showing which safe harbours were tested and the pass/fail result for each jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "CbCR data extract",
+          "description": "Extract of Country-by-Country Report data used for the transitional CbCR safe harbour.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "De minimis test workbook",
+          "description": "Workbook showing the de minimis test calculations for each jurisdiction.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Simplified ETR test workbook",
+          "description": "Workbook showing the simplified ETR test calculations.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Routine profits test workbook",
+          "description": "Workbook showing the routine profits test calculations.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off approving the safe harbour assessment results.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Safe harbour claim form or disclosure",
+          "description": "Formal safe harbour claim or disclosure submitted to the tax authority, where required.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Jurisdiction-by-jurisdiction results table",
+          "description": "Table showing the safe harbour test results for each jurisdiction.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on safe harbour eligibility, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "CbCR reconciliation to financial statements",
+          "description": "Reconciliation of CbCR data to audited financial statements.",
+          "category": "Supporting calculations",
+          "detailLevel": "detailed",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Finance Owner"
+        },
+        {
+          "name": "Historical safe harbour log",
+          "description": "Log of safe harbour claims made in prior years.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Safe harbour data quality checks",
+          "description": "Evidence of data quality checks on CbCR and financial data.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Data Provider"
+        }
+      ]
+    },
+    {
+      "obligationType": "LOCAL_ADDITIONAL_INFORMATION_REPORT",
+      "templateName": "Local additional information report workflow",
+      "description": "Prepare and file a local additional information report required by the jurisdiction as a supplement to the GIR or top-up tax return.",
+      "titleKeywords": "additional information report",
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Confirm reporting requirement",
+          "description": "Verify the jurisdiction requires a local additional information report and identify the content, format, and deadline.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Verify local reporting requirement and deadline",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Identify required content and format",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Collect local data",
+          "description": "Gather jurisdiction-specific data required for the additional report.",
+          "phase": "Data collection",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider",
+          "checklist": [
+            {
+              "text": "Collect jurisdiction-specific entity and financial data",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Gather local adjustments and disclosures",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare report",
+          "description": "Prepare the additional information report in the required format.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Complete report form or document",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Cross-check to GIR and/or return data",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Validate against local format requirements",
+              "detailLevel": "detailed",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Review and approve",
+          "description": "Senior review of the additional information report.",
+          "phase": "Review and approval",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer",
+          "checklist": [
+            {
+              "text": "Senior review of report content",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Sign-off by authorised signatory",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Submit report",
+          "description": "Submit the additional information report to the local tax authority.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via local portal or prescribed method",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain filing confirmation",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Filed report (PDF or electronic)",
+          "description": "Copy of the submitted additional information report.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Filing receipt",
+          "description": "Official filing receipt from the tax authority.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local data workbook",
+          "description": "Workbook containing jurisdiction-specific data used to prepare the report.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Consistency check to GIR / return",
+          "description": "Reconciliation showing data consistency with the GIR and/or top-up tax return.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Senior review sign-off",
+          "description": "Internal sign-off by the senior reviewer.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Reviewer"
+        },
+        {
+          "name": "Local adjustments schedule",
+          "description": "Schedule of jurisdiction-specific adjustments included in the report.",
+          "category": "Supporting calculations",
+          "detailLevel": "standard",
+          "requirementLevel": "conditional_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Local legislation reference",
+          "description": "Reference to the local legislation requiring this report.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Source data pack",
+          "description": "Pack of source financial data used to prepare the report.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on local reporting requirements, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the tax authority regarding this report.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Report preparation working papers",
+          "description": "Detailed working papers for the report preparation.",
+          "category": "Supporting calculations",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Data quality checks",
+          "description": "Evidence of data quality checks on local source data.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Data Provider"
+        }
+      ]
+    },
+    {
+      "obligationType": "_fallback",
+      "templateName": "Fallback workflow",
+      "description": "Generic compliance workflow for obligations without a specific template. Provides core tasks and evidence items applicable to any Pillar 2 obligation.",
+      "titleKeywords": null,
+      "isSupplementary": false,
+      "isOptional": false,
+      "tasks": [
+        {
+          "name": "Review obligation requirements",
+          "description": "Identify the statutory requirements, deadline, and responsible party for this obligation.",
+          "phase": "Applicability and legal basis",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead",
+          "checklist": [
+            {
+              "text": "Identify statutory requirements and deadline",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Confirm responsible entity or person",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Prepare submission",
+          "description": "Gather the required information and complete the submission form or document.",
+          "phase": "Return / report preparation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Gather required information",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Complete submission form or document",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Review for accuracy",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        },
+        {
+          "name": "Submit",
+          "description": "Submit via the appropriate channel and obtain confirmation.",
+          "phase": "Submission / payment",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner",
+          "checklist": [
+            {
+              "text": "Submit via appropriate channel",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            },
+            {
+              "text": "Obtain confirmation or receipt",
+              "detailLevel": "standard",
+              "requirementLevel": "core_required"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        {
+          "name": "Submission confirmation",
+          "description": "Official confirmation or receipt from the authority confirming the submission was received.",
+          "category": "Filing receipt",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Submitted document (copy)",
+          "description": "Copy of the document or form that was submitted.",
+          "category": "Filed return",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Internal approval",
+          "description": "Internal sign-off confirming the submission was reviewed and approved.",
+          "category": "Approval / sign-off",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Global Tax Lead"
+        },
+        {
+          "name": "Supporting documentation",
+          "description": "Any supporting documentation prepared for the submission.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Legislation reference",
+          "description": "Reference to the legislation requiring this obligation.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Source data",
+          "description": "Source data used to prepare the submission.",
+          "category": "Supporting documentation",
+          "detailLevel": "standard",
+          "requirementLevel": "core_required",
+          "defaultOwnerRole": "Data Provider"
+        },
+        {
+          "name": "External adviser memo",
+          "description": "External adviser memo on the obligation, where relevant.",
+          "category": "Adviser memo",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "External Adviser"
+        },
+        {
+          "name": "Authority correspondence",
+          "description": "Correspondence with the authority regarding this obligation.",
+          "category": "Supporting documentation",
+          "detailLevel": "detailed",
+          "requirementLevel": "optional",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        },
+        {
+          "name": "Process notes",
+          "description": "Internal notes documenting the submission process.",
+          "category": "Supporting documentation",
+          "detailLevel": "full_control",
+          "requirementLevel": "full_control_only",
+          "defaultOwnerRole": "Jurisdiction Owner"
+        }
+      ]
+    }
+  ]
+}
